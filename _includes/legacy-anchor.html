@@ -1,0 +1,4 @@
+{% assign navigation_item = site.data.navigation | where: 'id', include.section | first %}
+{% if navigation_item.legacy_id != '' %}
+  <span class="legacy-anchor" id="{{ navigation_item.legacy_id }}" aria-hidden="true"></span>
+{% endif %}

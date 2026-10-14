@@ -1,0 +1,41 @@
+<section class="section contact-section shell" id="contact" aria-labelledby="contact-title">
+  {% include legacy-anchor.html section="contact" %}
+  <p class="eyebrow reveal">{% include translation.html key="contact_kicker" %}</p>
+  <div class="contact-content">
+    <div class="reveal">
+      <h2 id="contact-title">{% include translation.html key="contact_title" %}</h2>
+      <p>{% include translation.html key="contact_text" %}</p>
+    </div>
+    <div class="contact-links reveal">
+      {% if site.github_url != '' -%}
+        <a
+          class="contact-row magnetic"
+          href="{{ site.github_url | escape }}"
+          rel="noopener noreferrer"
+          target="_blank"
+          ><span>GitHub</span><span aria-hidden="true">↗</span></a
+        >
+      {%- else %}
+        <div class="contact-row is-pending">
+          <span>GitHub</span><small>{% include translation.html key="not_configured" %}</small>
+        </div>
+      {% endif -%}
+      {%- if site.linkedin != '' -%}
+        <a
+          class="contact-row magnetic"
+          href="{{ site.linkedin | escape }}"
+          rel="noopener noreferrer"
+          target="_blank"
+          ><span>LinkedIn</span><span aria-hidden="true">↗</span></a
+        >
+      {%- else %}
+        <div class="contact-row is-pending">
+          <span>LinkedIn</span><small>{% include translation.html key="not_configured" %}</small>
+        </div>
+      {% endif -%}
+      {%- if site.github_url == '' and site.linkedin == '' %}
+        <p class="contact-note">{% include translation.html key="contact_pending" %}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,288 @@
+skip:
+  fr: Aller au contenu
+  en: Skip to content
+nav_label:
+  fr: Navigation principale
+  en: Main navigation
+home:
+  fr: Accueil
+  en: Home
+profile:
+  fr: Profil
+  en: Profile
+projects:
+  fr: Projets
+  en: Projects
+skills:
+  fr: Compétences
+  en: Competencies
+path:
+  fr: Parcours
+  en: Path
+contact:
+  fr: Contact
+  en: Contact
+menu:
+  fr: Menu
+  en: Menu
+hero_kicker:
+  fr: PORTFOLIO PROFESSIONNEL · BTS SIO
+  en: PROFESSIONAL PORTFOLIO · BTS SIO
+hero_line:
+  fr: Infrastructure · Cloud · Sécurité
+  en: Infrastructure · Cloud · Security
+hero_intro:
+  fr: 'Étudiant en BTS SIO, option SISR.
+
+    Une trajectoire vers le cloud et sa sécurité.'
+  en: 'BTS SIO student, specialising in systems and networks.
+
+    A path towards cloud architecture and security.'
+explore:
+  fr: Explorer mes projets
+  en: Explore my projects
+scroll:
+  fr: Défiler pour découvrir
+  en: Scroll to explore
+motion_on:
+  fr: Pause de l’animation
+  en: Pause animation
+motion_off:
+  fr: Reprendre l’animation
+  en: Resume animation
+profile_kicker:
+  fr: 01 / PROFIL
+  en: 01 / PROFILE
+profile_title:
+  fr: 'Comprendre les systèmes.
+
+    Construire la suite.'
+  en: 'Understand systems.
+
+    Build what comes next.'
+profile_text:
+  fr:
+    Je suis Nathan, étudiant en première année de BTS SIO, option SISR. Je m’intéresse aux infrastructures,
+    aux systèmes et aux réseaux qui rendent les services numériques possibles.
+  en:
+    I’m Nathan, a first-year BTS SIO student specialising in systems and networks. I’m interested in
+    the infrastructure that makes digital services possible.
+profile_text_2:
+  fr:
+    'Mon objectif à long terme : évoluer vers l’architecture cloud, avec une attention particulière
+    portée à la sécurité. Ce portfolio documente mes réalisations et les compétences que je construis
+    pendant ma formation.'
+  en:
+    My long-term goal is to move towards cloud architecture, with a particular focus on security. This
+    portfolio documents my work and the competencies I develop during my studies.
+current:
+  fr: Actuellement
+  en: Currently
+year:
+  fr: BTS SIO · Première année
+  en: BTS SIO · First year
+specialty:
+  fr: Option SISR
+  en: Systems & networks
+direction:
+  fr: Objectif à long terme
+  en: Long-term goal
+architect:
+  fr: Cloud & sécurité
+  en: Cloud & security
+projects_kicker:
+  fr: 02 / RÉALISATIONS
+  en: 02 / SELECTED WORK
+projects_title:
+  fr: 'Du travail.
+
+    Des preuves.'
+  en: 'The work.
+
+    The evidence.'
+projects_intro:
+  fr:
+    Une réalisation, un contexte, des décisions techniques. Chaque projet raconte ce qui a été fait
+    et ce qu’il reste à vérifier.
+  en:
+    A project, a context, technical decisions. Each entry explains what was done and what still needs
+    verification.
+all:
+  fr: Tous
+  en: All
+open_project:
+  fr: Voir le projet
+  en: View project
+empty:
+  fr: Aucun projet dans cette catégorie.
+  en: No projects in this category.
+project_count:
+  fr: réalisation documentée
+  en: documented project
+project_counts:
+  fr: réalisations documentées
+  en: documented projects
+future_work:
+  fr: La suite s’écrit pendant la formation.
+  en: The next chapter unfolds during my studies.
+future_detail:
+  fr: Les prochains TP et réalisations viendront enrichir ce portfolio.
+  en: Future lab work and projects will be documented here.
+skills_kicker:
+  fr: 03 / COMPÉTENCES BTS SIO
+  en: 03 / BTS SIO COMPETENCIES
+skills_title:
+  fr: 'Les faits,
+
+    avant les cases.'
+  en: 'Evidence,
+
+    before checkmarks.'
+skills_intro:
+  fr:
+    Les six compétences officielles du bloc 1. Chaque association renvoie à une réalisation et à son
+    état de preuve.
+  en: The six official block 1 competencies. Each association links to a project and its evidence status.
+matrix_caption:
+  fr: Tableau de synthèse · Bloc 1 — Support et mise à disposition de services informatiques
+  en: Competency matrix · Block 1 — IT support and service provision
+competency:
+  fr: Compétence officielle
+  en: Official competency
+matrix_note:
+  fr: ↗ Association documentée · ◇ Preuve de publication à compléter · — Non associée
+  en: ↗ Documented association · ◇ Publication evidence pending · — Not associated
+matrix_pending:
+  fr: Publication à vérifier
+  en: Publication pending
+matrix_link:
+  fr: Lire les preuves
+  en: Read the evidence
+matrix_scroll:
+  fr: Le tableau défile horizontalement si nécessaire.
+  en: Scroll the table horizontally when needed.
+path_kicker:
+  fr: 04 / PARCOURS
+  en: 04 / LEARNING PATH
+path_title:
+  fr: 'Une direction claire.
+
+    Un parcours à construire.'
+  en: 'A clear direction.
+
+    A path to build.'
+path_now:
+  fr: Aujourd’hui
+  en: Now
+path_study:
+  fr: BTS SIO · SISR
+  en: BTS SIO · Systems & networks
+path_study_text:
+  fr: Première année. Construire les bases en infrastructure, systèmes et réseaux.
+  en: First year. Building foundations in infrastructure, systems and networks.
+path_next:
+  fr: À développer
+  en: To develop
+path_foundation:
+  fr: Infrastructure & sécurité
+  en: Infrastructure & security
+path_foundation_text:
+  fr: Approfondir la pratique, documenter les TP et relier chaque réalisation aux compétences du référentiel.
+  en: Deepen practical skills, document lab work and connect each project to the curriculum competencies.
+path_goal:
+  fr: À long terme
+  en: Long term
+path_cloud:
+  fr: Architecture cloud
+  en: Cloud architecture
+path_cloud_text:
+  fr: Évoluer vers le métier de Cloud Architect / Cloud Security Architect.
+  en: Work towards a career as a Cloud Architect / Cloud Security Architect.
+contact_kicker:
+  fr: 05 / CONTACT
+  en: 05 / CONTACT
+contact_title:
+  fr: 'Poursuivre
+
+    la conversation.'
+  en: 'Continue
+
+    the conversation.'
+contact_text:
+  fr: Retrouvez mon travail et mon parcours sur mes profils professionnels.
+  en: Find my work and learning path on my professional profiles.
+not_configured:
+  fr: Profil à renseigner
+  en: Profile pending
+contact_pending:
+  fr: Les liens seront disponibles après ajout de mes profils.
+  en: Links will be available once my profiles have been added.
+legal:
+  fr: Mentions légales
+  en: Legal notices
+back:
+  fr: Retour aux projets
+  en: Back to projects
+project_meta:
+  fr: Fiche de réalisation professionnelle
+  en: Professional project record
+tools:
+  fr: Outils & technologies
+  en: Tools & technologies
+evidence_pending:
+  fr: Développement local terminé · Publication et preuves publiques à compléter
+  en: Local development complete · Deployment and public evidence pending
+french_evidence:
+  fr: Cette réalisation est documentée en français pour l’épreuve E5.
+  en: This project is documented in French for the E5 examination.
+contents:
+  fr: Dans cette réalisation
+  en: In this project
+related:
+  fr: Autres réalisations
+  en: Other projects
+not_found:
+  fr: Cette page a changé d’adresse.
+  en: This page has moved.
+not_found_text:
+  fr: Retrouvez les réalisations depuis l’accueil.
+  en: Find the projects from the homepage.
+return_home:
+  fr: Revenir à l’accueil
+  en: Return home
+legal_title:
+  fr: Mentions légales
+  en: Legal notices
+legal_kicker:
+  fr: INFORMATIONS DU SITE
+  en: SITE INFORMATION
+not_associated:
+  fr: Non associée
+  en: Not associated
+language_label:
+  fr: Langue
+  en: Language
+project_image_alt:
+  fr: Illustration de la réalisation
+  en: Project illustration
+filter_label:
+  fr: Filtrer les projets
+  en: Filter projects
+site_description:
+  fr: 'Portfolio professionnel de Nathan S., étudiant en BTS SIO SISR : infrastructure, cloud et sécurité.'
+  en: Professional portfolio of Nathan S., a BTS SIO systems and networks student.
+section_context:
+  fr: Contexte
+  en: Context
+section_resources:
+  fr: Conditions et moyens
+  en: Conditions and resources
+section_activity:
+  fr: Description de l’activité
+  en: Activity description
+section_evidence:
+  fr: Productions et preuves
+  en: Outputs and evidence
+section_learning:
+  fr: Ce que j’en retiens
+  en: Lessons learned

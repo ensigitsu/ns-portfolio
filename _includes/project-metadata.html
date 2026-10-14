@@ -1,0 +1,44 @@
+{% assign project = include.project %}
+{% assign project_title_fr = project.title_fr | default: project.title %}
+{% assign project_title_en = project.title_en | default: project.title %}
+{% assign project_summary_fr = project.summary_fr
+  | default: project.resume
+  | default: project.summary
+%}
+{% assign project_summary_en = project.summary
+  | default: project.resume_en
+  | default: project.resume
+%}
+{% assign project_context_fr = project.context_fr
+  | default: project.cadre
+  | default: project.context
+%}
+{% assign project_context_en = project.context
+  | default: project.cadre_en
+  | default: project.cadre
+%}
+{% assign project_competencies = project.competencies | default: project.competences %}
+{% assign project_cover = project.cover | default: '/assets/images/project-default.svg' %}
+{% assign project_alt_fr = project.cover_alt_fr
+  | default: project.cover_alt
+  | default: site.data.translations.project_image_alt.fr
+%}
+{% assign project_alt_en = project.cover_alt_en
+  | default: project.cover_alt
+  | default: site.data.translations.project_image_alt.en
+%}
+{% assign project_caption_fr = project.cover_caption_fr
+  | default: project.cover_caption
+  | default: project_alt_fr
+%}
+{% assign project_caption_en = project.cover_caption_en
+  | default: project.cover_caption
+  | default: project_alt_en
+%}
+{% assign project_repository = project.github_url | default: '' %}
+{% assign project_demo = project.demo_url | default: '' %}
+
+{% assign project_evidence_fragment = '' %}
+{% if project.competencies %}
+  {% assign project_evidence_fragment = '#evidence' %}
+{% endif %}

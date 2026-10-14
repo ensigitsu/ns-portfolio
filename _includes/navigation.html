@@ -1,0 +1,42 @@
+<header class="site-header">
+  <a
+    class="wordmark"
+    href="{{ '/' | relative_url }}#home"
+    aria-label="{{ site.title | escape }} — {{ site.data.translations.home.fr | escape }}"
+    >N<span class="wordmark-dot">.</span></a
+  >
+  <nav
+    class="navigation"
+    aria-label="{{ site.data.translations.nav_label.fr | escape }}"
+    data-i18n-aria="nav_label"
+  >
+    <button
+      class="menu-toggle js-only"
+      type="button"
+      aria-expanded="false"
+      aria-controls="nav-links"
+    >
+      <span class="menu-icon" aria-hidden="true"></span>
+      {% include translation.html key='menu' %}
+    </button>
+    <ul id="nav-links" class="nav-links">
+      {% for item in site.data.navigation %}
+        <li>
+          <a href="{{ '/' | relative_url }}#{{ item.id }}" data-section="{{ item.id }}">
+            {%- include translation.html key=item.label -%}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div
+    class="language-switch js-only"
+    role="group"
+    aria-label="{{ site.data.translations.language_label.fr | escape }}"
+    data-i18n-aria="language_label"
+  >
+    <button type="button" data-language="fr" aria-pressed="true">FR</button>
+    <span aria-hidden="true">/</span>
+    <button type="button" data-language="en" aria-pressed="false">EN</button>
+  </div>
+</header>

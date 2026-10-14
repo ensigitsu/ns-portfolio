@@ -1,0 +1,130 @@
+---
+layout: default
+---
+{% include project-metadata.html project=page %}
+<article class="project-page shell">
+  <a class="text-link back-link" href="{{ '/' | relative_url }}#projects"
+    ><span aria-hidden="true">←</span> {% include translation.html key='back' -%}
+  </a>
+  <header class="project-header">
+    <p class="eyebrow">{% include translation.html key='project_meta' %}</p>
+    <h1 data-fr="{{ project_title_fr | escape }}" data-en="{{ project_title_en | escape }}">
+      {{ project_title_fr | escape }}
+    </h1>
+    <p
+      class="project-summary"
+      data-fr="{{ project_summary_fr | escape }}"
+      data-en="{{ project_summary_en | escape }}"
+    >
+      {{ project_summary_fr | escape }}
+    </p>
+    <p class="project-meta">
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+        {{- page.date | date: '%d / %m / %Y' -}}
+      </time>
+      <span data-fr="{{ project_context_fr | escape }}" data-en="{{ project_context_en | escape }}">
+        {{- project_context_fr | escape -}}
+      </span>
+    </p>
+    {% if page.evidence_pending %}
+      <p class="status-note">
+        <span aria-hidden="true">◇</span> {% include translation.html key='evidence_pending' %}
+      </p>
+    {% endif %}
+    <div class="project-tags">
+      {% for technology in page.technologies -%}
+        <span>{{ technology | escape }}</span>
+      {%- endfor %}
+    </div>
+    <div class="project-competencies">
+      {% for code in project_competencies -%}
+        {%- assign competency = site.data.competences | where: 'code', code | first -%}
+        <span
+          ><b>{{ code | upcase }}</b> {{ competency.label_fr | escape -}}
+        </span>
+      {%- endfor %}
+    </div>
+    {% if project_repository != '' or project_demo != '' %}
+      <div class="external-links">
+        {% if project_repository != '' -%}
+          <a href="{{ project_repository | escape }}" rel="noopener noreferrer" target="_blank"
+            >GitHub ↗</a
+          >
+        {%- endif %}
+        {% if project_demo != '' -%}
+          <a href="{{ project_demo | escape }}" rel="noopener noreferrer" target="_blank">Demo ↗</a>
+        {%- endif %}
+      </div>
+    {% endif %}
+  </header>
+  {% if page.cover and page.cover != '' %}
+    <figure class="project-cover">
+      <img
+        src="{{ page.cover | relative_url }}"
+        alt="{{ project_alt_fr | escape }}"
+        data-alt-fr="{{ project_alt_fr | escape }}"
+        data-alt-en="{{ project_alt_en | escape }}"
+        width="1200"
+        height="760"
+      >
+      <figcaption
+        data-fr="{{ project_caption_fr | escape }}"
+        data-en="{{ project_caption_en | escape }}"
+      >
+        {{ project_caption_fr | escape }}
+      </figcaption>
+    </figure>
+  {% endif %}
+  {% unless page.has_english %}
+    <p class="status-note" data-lang="en" hidden>
+      {% include translation.html key='french_evidence' %}
+    </p>
+  {% endunless %}
+  <div
+    class="project-prose prose"
+    {% unless page.has_english %}
+      lang="fr"
+    {% endunless %}
+  >
+    {{ content }}
+  </div>
+  {% if page.gallery %}
+    <div class="project-gallery">
+      {% for image in page.gallery %}
+        <figure>
+          <img
+            src="{{ image.src | relative_url }}"
+            alt="{{ image.alt | escape }}"
+            loading="lazy"
+            width="{{ image.width | default: 1200 }}"
+            height="{{ image.height | default: 800 }}"
+          >
+          {%- if image.caption %}
+            <figcaption>{{ image.caption | escape }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% assign related_projects = site.projets | sort: 'date' | reverse %}
+  {% if related_projects.size > 1 %}
+    <aside class="related-projects">
+      <h2>{% include translation.html key='related' %}</h2>
+      {% for item in related_projects -%}
+        {%- if item.url != page.url -%}
+          {%- include project-metadata.html project=item -%}
+          <a
+            href="{{ item.url | relative_url }}"
+            data-fr="{{ project_title_fr | escape }}"
+            data-en="{{ project_title_en | escape }}"
+          >
+            {{- project_title_fr | escape -}}
+          </a>
+        {%- endif -%}
+      {%- endfor %}
+    </aside>
+  {% endif %}
+  <a class="button" href="{{ '/' | relative_url }}#projects"
+    >← {% include translation.html key='back' -%}
+  </a>
+</article>

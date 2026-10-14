@@ -1,0 +1,55 @@
+<section class="section projects-section shell" id="projects" aria-labelledby="projects-title">
+  {% include legacy-anchor.html section="projects" %}
+  <div class="section-heading reveal">
+    <p class="eyebrow">{% include translation.html key="projects_kicker" %}</p>
+    <div class="heading-row">
+      <h2 id="projects-title">{% include translation.html key="projects_title" %}</h2>
+      <p class="section-description">{% include translation.html key="projects_intro" %}</p>
+    </div>
+  </div>
+  <div class="projects-toolbar">
+    <p class="project-count">
+      <span class="count-number">
+        {%- if projects.size < 10 %}0{% endif -%}
+        {{- projects.size -}}
+      </span>
+      {% if projects.size == 1 -%}
+        {%- include translation.html key="project_count" -%}
+      {%- else -%}
+        {%- include translation.html key="project_counts" -%}
+      {%- endif %}
+    </p>
+    {% assign categories = projects | map: 'category' | compact | uniq -%}
+    {%- if categories.size > 1 %}
+      <div
+        class="project-filters js-only"
+        role="group"
+        aria-label="{{ site.data.translations.filter_label.fr | escape }}"
+        data-i18n-aria="filter_label"
+      >
+        <button data-filter="all" aria-pressed="true">
+          {% include translation.html key="all" %}
+        </button>
+        {%- for category in categories -%}
+          <button data-filter="{{ category | escape }}" aria-pressed="false">
+            {{ category | escape }}
+          </button>
+        {%- endfor %}
+      </div>
+    {% endif %}
+  </div>
+  <div class="project-grid">
+    {% for item in projects -%}
+      {%- include project-card.html project=item -%}
+    {%- endfor %}
+  </div>
+  <p class="filter-empty" role="status" hidden>{% include translation.html key="empty" %}</p>
+  <div class="future-work reveal">
+    <span class="future-symbol" aria-hidden="true">+</span>
+    <div>
+      <h3>{% include translation.html key="future_work" %}</h3>
+      <p>{% include translation.html key="future_detail" %}</p>
+    </div>
+    <span aria-hidden="true">BTS SIO / SISR</span>
+  </div>
+</section>

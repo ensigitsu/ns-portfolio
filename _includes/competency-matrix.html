@@ -1,0 +1,64 @@
+<div
+  class="matrix-wrapper reveal"
+  tabindex="0"
+  role="region"
+  aria-label="{{ site.data.translations.matrix_caption.fr | escape }}"
+  data-i18n-aria="matrix_caption"
+>
+  <table class="competency-matrix">
+    <caption>
+      {% include translation.html key='matrix_caption' %}
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">{% include translation.html key='competency' %}</th>
+        {% for item in include.projects %}
+          {% include project-metadata.html project=item %}
+          <th scope="col">
+            <a href="{{ item.url | relative_url }}" title="{{ project_title_fr | escape }}"
+              >P{{ forloop.rindex }}
+              <span aria-hidden="true">↗</span></a
+            >
+          </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for competency in site.data.competences %}
+        <tr>
+          <th scope="row">
+            <span class="competency-code">{{ competency.code | upcase }}</span
+            ><span>{{ competency.label_fr | escape }}</span>
+          </th>
+          {% for item in include.projects %}
+            {% include project-metadata.html project=item %}
+            <td>
+              {% if project_competencies contains competency.code %}
+                <a
+                  class="matrix-check{% if item.evidence_pending %} pending{% endif %}"
+                  href="{{ item.url | relative_url }}{{ project_evidence_fragment }}"
+                  aria-label="{{ competency.label_fr | escape }} : {{ project_title_fr | escape }}{% if item.evidence_pending %} — {{ site.data.translations.matrix_pending.fr | escape }}{% endif %}"
+                >
+                  {% if item.evidence_pending -%}
+                    <span aria-hidden="true">◇</span
+                    ><span class="sr-only">
+                      {%- include translation.html key='matrix_pending' -%}
+                    </span>
+                  {% else -%}
+                    <span aria-hidden="true">↗</span
+                    ><span class="sr-only">{% include translation.html key='matrix_link' %}</span>
+                  {%- endif %}
+                </a>
+              {% else -%}
+                <span class="matrix-empty" aria-hidden="true">—</span
+                ><span class="sr-only">{% include translation.html key='not_associated' %}</span>
+              {%- endif %}
+            </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="matrix-legend">{% include translation.html key='matrix_note' %}</p>
+<p class="matrix-hint">{% include translation.html key='matrix_scroll' %}</p>

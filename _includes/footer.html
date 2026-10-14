@@ -1,0 +1,17 @@
+<footer class="site-footer shell">
+  <a href="{{ '/' | relative_url }}" class="footer-name">Nathan S<span>.</span></a>
+  <p>© 2026 - NS</p>
+  <div class="footer-links">
+    {% if site.github_url != '' -%}
+      <a href="{{ site.github_url | escape }}" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+    {%- endif -%}
+    {%- if site.linkedin != '' -%}
+      <a href="{{ site.linkedin | escape }}" rel="noopener noreferrer" target="_blank"
+        >LinkedIn ↗</a
+      >
+    {%- endif -%}
+    <a href="{{ '/mentions-legales/' | relative_url }}">
+      {%- include translation.html key="legal" -%}
+    </a>
+  </div>
+</footer>

@@ -1,30 +1,71 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.resume | default: site.description }}">
-  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-</head>
-<body>
-  <header>
-    <p class="site"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></p>
-    <nav aria-label="Menu principal">
-      <ul>
-        <li><a href="{{ '/' | relative_url }}#projets">Projets</a></li>
-        <li><a href="{{ '/' | relative_url }}#competences">Compétences</a></li>
-        <li><a href="{{ '/mentions-legales/' | relative_url }}">Mentions légales</a></li>
-      </ul>
-    </nav>
-  </header>
+{% include project-metadata.html project=page %}
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, nosnippet, noimageindex">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#050914">
+    <title>
+      {% if page.title %}{{ project_title_fr | escape }} · {% endif %}
+      {{ site.title | escape }}
+      — BTS SIO SISR
+    </title>
+    <meta
+      name="description"
+      content="{{ project_summary_fr | default: site.data.translations.site_description.fr | escape }}"
+    >
+    <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link
+      rel="preload"
+      href="{{ '/assets/fonts/manrope-latin.woff2' | relative_url }}"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% if site.url != '' %}<link rel="canonical" href="{{ page.url | absolute_url }}">{% endif %}
+  </head>
+  <body
+    data-baseurl="{{ site.baseurl | escape }}"
+    data-page="{{ page.kind | default: 'inner' }}"
+    data-title-fr="{{ project_title_fr | default: site.title | escape }}"
+    data-description-fr="{{ project_summary_fr | default: site.data.translations.site_description.fr | escape }}"
+    data-description-en="{{ project_summary_en | default: site.description | escape }}"
+    data-title-en="{{ project_title_en | default: site.title | escape }}"
+  >
+    <a class="skip-link" href="#main">{% include translation.html key="skip" %}</a>
+    <div class="ocean-backdrop" aria-hidden="true">
+      <img
+        class="ocean-fallback"
+        src="{{ '/assets/images/ocean-reflections.svg' | relative_url }}"
+        alt=""
+        width="1200"
+        height="760"
 
-  <main>
-{{ content }}
-  </main>
-
-  <footer>
-    <p>{% if site.email != "" %}<a href="mailto:{{ site.email }}">{{ site.email }}</a> · {% endif %}{% if site.linkedin != "" %}<a href="{{ site.linkedin }}">LinkedIn</a> · {% endif %}contenu sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr">CC BY 4.0</a> · <a href="{{ '/mentions-legales/' | relative_url }}">mentions légales</a></p>
-  </footer>
-</body>
+      ><canvas
+        id="ocean-canvas"
+        data-vertex="{{ '/assets/shaders/ocean.vert.glsl' | relative_url }}"
+        data-fragment="{{ '/assets/shaders/ocean.frag.glsl' | relative_url }}"
+      ></canvas>
+    </div>
+    {% include navigation.html %}
+    <main id="main" tabindex="-1">{{ content }}</main>
+    {% include footer.html %}
+    <button
+      class="motion-toggle background-motion js-only"
+      type="button"
+      aria-pressed="false"
+      data-motion
+      hidden
+    >
+      {% include translation.html key="motion_on" %}
+    </button>
+    <div class="cursor-halo" aria-hidden="true"></div>
+    <script type="importmap">
+      { "imports": { "three": "{{ '/assets/vendor/three.module.js' | relative_url }}" } }
+    </script>
+    <script type="module" src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
 </html>
