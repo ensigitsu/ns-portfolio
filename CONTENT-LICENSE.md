@@ -1,0 +1,2 @@
+# Licence des contenus originaux
+Les textes et illustrations originaux du portfolio Nathan S. sont proposés sous licence Creative Commons Attribution 4.0 International (CC BY 4.0) : https://creativecommons.org/licenses/by/4.0/ . Attribution : Nathan S., avec un lien vers le portfolio public lorsqu’il sera disponible. Les droits de tiers et la confidentialité restent applicables. Les futurs documents, captures ou modèles n’entrent dans cette licence que si leurs droits le permettent. Le code relève de la licence MIT ; polices et dépendances suivent leurs notices propres.

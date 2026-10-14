@@ -1,0 +1,10 @@
+{
+  "name": "nathan-portfolio",
+  "private": true,
+  "scripts": {
+    "preview:build": "node scripts/build-local-preview.mjs"
+  },
+  "devDependencies": {
+    "prettier": "3.9.10"
+  }
+}

@@ -1,0 +1,14 @@
+---
+layout: default
+title: "Page not found"
+title_fr: "Page introuvable"
+permalink: /404.html
+---
+<section class="not-found shell">
+  <p class="eyebrow">404</p>
+  <h1>{% include translation.html key="not_found" %}</h1>
+  <p>{% include translation.html key="not_found_text" %}</p>
+  <a class="button primary" href="{{ '/' | relative_url }}">
+    {%- include translation.html key="return_home" %} ↗</a
+  >
+</section>
