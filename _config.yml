@@ -1,12 +1,12 @@
 title: Nathan S.
 description: Professional portfolio of Nathan S., a BTS SIO systems and networks student.
 lang: fr
-url: ''
-baseurl: /portfolio
+url: https://ensigitsu.github.io
+baseurl: /ns-portfolio
 email: ''
-github_url: ''
+github_url: https://github.com/ensigitsu
 linkedin: https://www.linkedin.com/in/nathan-sas
-repository_url: ''
+repository_url: https://github.com/ensigitsu/ns-portfolio
 avatar:
   enabled: false
   model: /assets/models/avatar.glb
@@ -27,6 +27,7 @@ kramdown:
   input: GFM
   hard_wrap: false
 exclude:
+  - mentions-legales.md
   - README.md
   - LICENSE
   - CONTENT-LICENSE.md
