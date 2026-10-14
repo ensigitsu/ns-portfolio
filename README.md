@@ -14,7 +14,7 @@ The HTML inside `portfolio` is Jekyll source. Opening `portfolio/index.html` dir
 2. Create a public GitHub repository named `portfolio`. You can use the [teacher’s template](https://github.com/AbidHamza/modele-portfolio-bts-sio).
 3. If starting from that template, delete its old `mentions-legales.md` before uploading `legal.md`, because both would otherwise generate the same legal URL. The old `_layouts/projet.html` and `css/style.css` are no longer used and can also be removed.
 4. Open **Code → Add file → Upload files**. Upload the **contents** of the extracted folder, with `_config.yml` and `index.html` directly at repository root. Commit to `main`.
-5. Edit `_config.yml`. Set `url` to `https://YOUR_USERNAME.github.io`, keep `baseurl: /portfolio`, and fill only real profile URLs and appropriate public contact details.
+5. Edit `_config.yml`. Set `url` to `https://YOUR_USERNAME.github.io`, keep `baseurl: /ns-portfolio`, and fill only real profile URLs and appropriate public contact details.
 6. Open **Settings → Pages → Deploy from a branch → main → / (root) → Save**.
 7. Wait for **Actions → pages build and deployment** to succeed, then open **Settings → Pages → Visit site**. Verify the real public URL and content.
 8. Complete the actual E5 screenshots, deployment duration and Lighthouse results. None of these public results has been fabricated.
