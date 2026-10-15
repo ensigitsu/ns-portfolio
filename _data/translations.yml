@@ -115,7 +115,7 @@ open_project:
   en: View project
 empty:
   fr: Aucun projet dans cette catégorie.
-  en: No projects in this category.
+  en: No projects in this category. 
 project_count:
   fr: réalisation documentée
   en: documented project
