@@ -2,22 +2,39 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-const project = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const project = path.resolve(
+  path.dirname(fileURLToPath(import.meta.url)),
+  '..',
+);
 const argumentsList = process.argv.slice(2);
 function option(name, fallback) {
   const index = argumentsList.indexOf(name);
   return index === -1 ? fallback : argumentsList[index + 1];
 }
 const site = path.resolve(option('--site', path.join(project, '_site')));
-const output = path.resolve(option('--output', path.join(project, '..', 'local-preview')));
-const baseurl = option('--baseurl', '/portfolio');
+const output = path.resolve(
+  option('--output', path.join(project, '..', 'local-preview')),
+);
+const configuration = await fs.readFile(
+  path.join(project, '_config.yml'),
+  'utf8',
+);
+const configuredBaseurl =
+  configuration
+    .match(/^baseurl:[ \t]*([^\r\n]*)/m)?.[1]
+    .trim()
+    .replace(/^['"]|['"]$/g, '') || '';
+const baseurl = option('--baseurl', configuredBaseurl);
 const prettier = await import(process.env.PREVIEW_FORMATTER_URL || 'prettier');
 const modules = new Map();
 
 function resolveModule(reference, origin) {
   if (reference === 'three') return 'assets/vendor/three.module.js';
-  if (!reference.startsWith('.')) throw new Error(`Unsupported module: ${reference}`);
-  return path.posix.normalize(path.posix.join(path.posix.dirname(origin), reference));
+  if (!reference.startsWith('.'))
+    throw new Error(`Unsupported module: ${reference}`);
+  return path.posix.normalize(
+    path.posix.join(path.posix.dirname(origin), reference),
+  );
 }
 
 async function bundleModule(id) {
@@ -43,7 +60,9 @@ async function bundleModule(id) {
         if (specifier.type === 'ImportNamespaceSpecifier')
           return `const ${local} = load(${target});`;
         const imported =
-          specifier.type === 'ImportDefaultSpecifier' ? 'default' : specifier.imported.name;
+          specifier.type === 'ImportDefaultSpecifier'
+            ? 'default'
+            : specifier.imported.name;
         return `const ${local} = load(${target})[${JSON.stringify(imported)}];`;
       });
       edit(node.start, node.end, declarations.join('\n') || `load(${target});`);
@@ -54,13 +73,21 @@ async function bundleModule(id) {
         edit(node.start, node.declaration.start, '');
         const names = node.declaration.id
           ? [node.declaration.id.name]
-          : node.declaration.declarations.map((declaration) => declaration.id.name);
-        for (const name of names) exports.push(`exports[${JSON.stringify(name)}] = ${name};`);
+          : node.declaration.declarations.map(
+              (declaration) => declaration.id.name,
+            );
+        for (const name of names)
+          exports.push(`exports[${JSON.stringify(name)}] = ${name};`);
       } else {
         const properties = node.specifiers.map(
-          (specifier) => `${JSON.stringify(specifier.exported.name)}: ${specifier.local.name}`,
+          (specifier) =>
+            `${JSON.stringify(specifier.exported.name)}: ${specifier.local.name}`,
         );
-        edit(node.start, node.end, `Object.assign(exports, {${properties.join(',')}});`);
+        edit(
+          node.start,
+          node.end,
+          `Object.assign(exports, {${properties.join(',')}});`,
+        );
       }
     }
     if (node.type === 'ExportDefaultDeclaration')
@@ -93,7 +120,8 @@ async function bundleModule(id) {
   }
   visit(ast.program);
   for (const change of edits.sort((a, b) => b.start - a.start)) {
-    source = source.slice(0, change.start) + change.value + source.slice(change.end);
+    source =
+      source.slice(0, change.start) + change.value + source.slice(change.end);
   }
   const asynchronous = id === 'assets/js/main.js' ? 'async ' : '';
   modules.set(
@@ -124,7 +152,12 @@ for (const filename of await files(site)) {
     payload[relative] = await fs.readFile(filename, 'utf8');
     continue;
   }
-  if (relative.endsWith('.html') || relative.endsWith('.js') || relative.endsWith('.md')) continue;
+  if (
+    relative.endsWith('.html') ||
+    (relative.endsWith('.js') && !relative.startsWith('assets/demos/')) ||
+    relative.endsWith('.md')
+  )
+    continue;
   const target = path.join(output, relative);
   await fs.mkdir(path.dirname(target), { recursive: true });
   await fs.copyFile(filename, target);
@@ -156,24 +189,32 @@ const runtime = `(() => {
 })();\n`;
 await fs.writeFile(path.join(output, 'assets/js/local-preview.js'), runtime);
 let css = await fs.readFile(path.join(site, 'assets/css/style.css'), 'utf8');
-const font = (await fs.readFile(path.join(site, 'assets/fonts/manrope-latin.woff2'))).toString(
-  'base64',
-);
+const font = (
+  await fs.readFile(path.join(site, 'assets/fonts/manrope-latin.woff2'))
+).toString('base64');
 css = css.replace(
   /url\(['"]?\.\.\/fonts\/manrope-latin\.woff2['"]?\)/g,
   `url('data:font/woff2;base64,${font}')`,
 );
 await fs.writeFile(path.join(output, 'assets/css/style.css'), css);
 
-for (const filename of (await files(site)).filter((file) => file.endsWith('.html'))) {
+for (const filename of (await files(site)).filter((file) =>
+  file.endsWith('.html'),
+)) {
   const relative = path.relative(site, filename);
   const target = path.join(output, relative);
   const script = path
-    .relative(path.dirname(target), path.join(output, 'assets/js/local-preview.js'))
+    .relative(
+      path.dirname(target),
+      path.join(output, 'assets/js/local-preview.js'),
+    )
     .split(path.sep)
     .join('/');
   let html = await fs.readFile(filename, 'utf8');
-  html = html.replace(/<script\b[^>]*type="importmap"[^>]*>[\s\S]*?<\/script>/g, '');
+  html = html.replace(
+    /<script\b[^>]*type="importmap"[^>]*>[\s\S]*?<\/script>/g,
+    '',
+  );
   html = html.replace(
     /<script\b[^>]*type="module"[^>]*>[\s\S]*?<\/script>/g,
     `<script src="${script}" defer></script>`,
@@ -182,9 +223,12 @@ for (const filename of (await files(site)).filter((file) => file.endsWith('.html
   html = html.replace(
     /\b(href|src|data-vertex|data-fragment)="([^"]*)"/g,
     (original, attribute, value) => {
-      if (value !== baseurl && !value.startsWith(baseurl + '/')) return original;
+      if (value !== baseurl && !value.startsWith(baseurl + '/'))
+        return original;
       const url = new URL(value, 'https://preview.invalid');
-      let local = decodeURIComponent(url.pathname.slice(baseurl.length)).replace(/^\//, '');
+      let local = decodeURIComponent(
+        url.pathname.slice(baseurl.length),
+      ).replace(/^\//, '');
       if (!local || local.endsWith('/')) local += 'index.html';
       const reference = path
         .relative(path.dirname(target), path.join(output, local))
@@ -197,7 +241,9 @@ for (const filename of (await files(site)).filter((file) => file.endsWith('.html
   await fs.writeFile(target, html);
 }
 
-console.log(`Local preview ready: ${pathToFileURL(path.join(output, 'index.html')).href}`);
+console.log(
+  `Local preview ready: ${pathToFileURL(path.join(output, 'index.html')).href}`,
+);
 console.log(
   'Open index.html inside the preview folder. Edit the Jekyll sources, then rebuild to refresh it.',
 );

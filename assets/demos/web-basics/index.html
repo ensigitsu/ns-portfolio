@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, nosnippet" />
+    <meta
+      name="description"
+      content="Un premier TP en HTML, CSS et JavaScript avec un message personnalisé et un compteur de clics."
+    />
+    <title>Découverte du Web — Nathan S.</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main id="main">
+      <a href="../../../index.html#projects">← Retour au portfolio</a>
+      <h1>Bonjour, je découvre le web</h1>
+      <p class="important">Cette page est la mienne.</p>
+
+      <h2>Mes trois passions</h2>
+      <ul>
+        <li>Le sport</li>
+        <li>La musique</li>
+        <li>Les jeux vidéo</li>
+      </ul>
+
+      <p>Mon site préféré : <a href="https://fr.wikipedia.org">Wikipédia</a></p>
+      <img src="landscape.svg" alt="Un soleil derrière des collines" width="640" height="400" />
+
+      <form id="name-form">
+        <label for="first-name">Ton prénom :</label>
+        <input id="first-name" type="text" autocomplete="given-name" maxlength="80" />
+        <div class="actions">
+          <button type="submit">Clique-moi</button>
+          <button id="reset-button" type="button">Remettre à zéro</button>
+        </div>
+      </form>
+
+      <p id="message" role="status">Le bouton n’a pas encore été cliqué.</p>
+      <p>Nombre de clics : <span id="counter">0</span></p>
+      <p class="important">Ce texte est aussi important.</p>
+      <p class="privacy-note">
+        Le prénom reste dans ton navigateur. Rien n’est envoyé par ce formulaire.
+      </p>
+    </main>
+  </body>
+</html>

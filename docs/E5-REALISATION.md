@@ -2,57 +2,62 @@
 
 **Intitulé :** Mise en ligne de mon portfolio professionnel.  
 **Nom et prénom :** Nathan S. — nom civil complet à renseigner par l’étudiant.  
-**Date de préparation des sources :** 12 octobre 2026.  
-**Date de publication effective :** à compléter après mise en ligne.  
-**Lieu :** à compléter ; aucun établissement ou lieu personnel n’a été fourni.
+**Préparation des sources :** à partir du 12 octobre 2026.  
+**Publication confirmée :** 14 octobre 2026.  
+**Durée d’une publication réussie relevée dans Actions :** 49 secondes.  
+**Lieu, matériel personnel et navigateur :** à compléter avec les conditions réelles.
 
 ## Contexte
 
-Pour l’épreuve E5 et ma présentation professionnelle, j’ai besoin d’un espace unique pour documenter mes réalisations pendant le BTS SIO, option SISR. Ce dossier contient les sources du site et une procédure de mise en ligne gratuite. La publication réelle reste à réaliser sur mon compte GitHub.
+Pour l’épreuve E5 et ma présentation professionnelle, j’ai besoin de documenter mes réalisations en BTS SIO, option SISR. Le site publié est consultable à l’adresse https://ensigitsu.github.io/ns-portfolio/. Les sources sont dans https://github.com/ensigitsu/ns-portfolio.
 
 ## Compétences mobilisées
 
-| Code | Libellé exact du bloc 1 | Action et état de preuve |
+| Code | Libellé exact du bloc 1 | Action et preuve |
 | --- | --- | --- |
-| c3 | Développer la présence en ligne de l’organisation | Sources du portfolio et mentions préparées ; publication, W3C et Lighthouse publics à compléter |
-| c6 | Organiser son développement professionnel | Modèle de réalisation et matrice automatiques préparés ; suivi régulier des réalisations à poursuivre |
+| c3 | Développer la présence en ligne de l’organisation | Portfolio publié, URL et dépôt disponibles ; captures et contrôles publics à joindre |
+| c6 | Organiser son développement professionnel | Fiches Markdown et matrice pour suivre les réalisations ; ajout du TP Web préparé avec ses sources |
 
-Ces associations ne remplacent pas la validation du professeur. Elles sont affichées comme incomplètes tant que les preuves de publication manquent. Bloc 1 : Support et mise à disposition de services informatiques, épreuve E5.
+Ces associations doivent être expliquées à partir du travail réel et relues avec le professeur. Elles ne remplacent pas une validation du jury. Le nouveau TP est associé seulement à c6.
 
 ## Conditions et moyens
 
-**Matériel et logiciels.** Préparation dans ChatGPT Work avec assistance IA ; sources HTML, CSS, JavaScript, Markdown, YAML et GLSL. Jekyll issu du modèle de classe, Three.js pour le hero, WebGL natif pour le fond et police Manrope locale. Hébergement prévu : compte GitHub gratuit, sans abonnement. Matériel personnel et versions de mon navigateur à renseigner.
+Le modèle Jekyll du professeur a été adapté avec une assistance IA dans ChatGPT Work. Les sources utilisent HTML, CSS, JavaScript, Markdown, YAML et GLSL. Le hero utilise Three.js ; le fond utilise WebGL natif. La police et les ressources de l’interface sont locales.
 
-**Conditions techniques.** Collection `_projets`, route `/projets/:name/`, build Jekyll sans plugin personnalisé. Dépôt attendu `portfolio`, branche `main`, racine. Le site fonctionne comme un ensemble statique ; les reflets sont rendus sur l’appareil du visiteur. Le fond animé est facultatif pour accéder au contenu.
+Le dépôt public `ensigitsu/ns-portfolio` est publié avec GitHub Pages, branche `main`, dossier racine. Jekyll génère les pages de la collection `_projets` sans plugin personnalisé. `baseurl` correspond au chemin `/ns-portfolio`.
 
-**Outils de contrôle.** Résultats locaux dans `TEST-REPORT.md`. Contrôles W3C, Lighthouse, navigateur, téléphone et URL publique à effectuer après publication.
+Les sources originales sont sous licence MIT et leurs contenus originaux sous CC BY 4.0, sous réserve des droits de tiers. Les notices des bibliothèques sont conservées. Le contact public et l’identité à afficher doivent être vérifiés par l’étudiant. Les captures doivent être relues et autorisées.
 
-**Cadre légal.** Mentions et licences préparées ; identification/contact public à finaliser. Code MIT, contenus originaux CC BY 4.0 sous réserve des droits de tiers ; dépendances selon leurs propres notices. Aucun formulaire ni mesure d’audience. La langue peut être mémorisée localement, ce qui est décrit dans les mentions. Les captures doivent être relues et les autorisations obtenues avant publication.
+## Description de l’activité
 
-## Description de l’activité — au passé, à la première personne
+J’ai fait préparer les sources de mon portfolio à partir du modèle du professeur. J’ai conservé la collection des réalisations, les six libellés officiels et la génération automatique des cartes, du compteur et de la matrice. J’ai fait adapter l’interface en français et en anglais et conserver le liquid dans le hero avec des reflets aquatiques en arrière-plan.
 
-J’ai fait préparer les sources de mon portfolio avec l’assistance de ChatGPT Work à partir du modèle Jekyll du professeur. J’ai conservé les fichiers Markdown de réalisations, leurs métadonnées YAML et les six libellés officiels. J’ai fait adapter l’identité visuelle, la navigation et la version anglaise de l’interface. Le projet contient une sculpture liquide limitée au hero et des reflets de soleil sous l’eau en WebGL, des visuels de secours et une gestion de la réduction des mouvements.
+J’ai téléversé les fichiers et leurs dossiers dans le dépôt GitHub, activé Pages et suivi les étapes build et deploy dans Actions. Le site a d’abord présenté un problème d’affichage : les chemins utilisaient `/portfolio/` alors que mon dépôt est nommé `ns-portfolio`. J’ai fait corriger la configuration puis confirmé que le site était accessible. Une publication réussie a duré 49 secondes.
 
-J’ai préparé une première fiche consacrée au portfolio, un modèle pour les prochaines réalisations et une matrice alimentée par les mêmes métadonnées que les cartes. J’ai gardé les chemins compatibles avec le sous-dossier `/portfolio/`. J’ai fait préparer les mentions et les notices de licence, ainsi qu’un guide de téléversement et de vérification.
-
-**Je n’ai pas encore créé ou publié mon dépôt GitHub dans cette préparation. Je n’ai pas relevé de durée Actions ni de note Lighthouse publique.** Après mes opérations réelles, je remplacerai ce paragraphe par ce que j’ai effectivement fait : création du dépôt, activation Pages, lecture des journaux, validation de l’URL, contrôles et ajout de preuves. Je devrai relire le code et être capable de l’expliquer devant le jury.
+J’ai transmis mon exercice de découverte du Web pour en préparer une deuxième fiche. La démonstration contient une saisie de prénom, un message, un compteur, une condition à cinq clics et une remise à zéro. La relecture et les corrections ont été faites avec assistance ; je dois comprendre le code et savoir le présenter. Cette mise à jour reste à envoyer sur GitHub et à vérifier publiquement.
 
 ## Productions et preuves
 
-Préparés : projet source complet, fichier de réalisation initial, modèle Markdown, données de compétences, interface bilingue, mentions, documentation et rapport des contrôles locaux.
+Disponibles : URL du portfolio, dépôt public, historique Actions, sources Jekyll complètes, deux fiches de projets et quatre fichiers de démonstration du TP Web.
 
-À joindre après publication : URL ouverte devant le jury ; accueil avec compteur et matrice ; mentions avec nom et hébergeur ; validation W3C ; note Lighthouse réelle ; historique des commits ; workflow Actions et durée. Les emplacements et règles de captures se trouvent dans `images/README.md`.
+À joindre : capture réelle de l’accueil après ajout du TP avec compteur 02 et matrice ; capture des mentions ; résultat W3C ; note Lighthouse ; capture du workflow avec durée. Les contrôles locaux sont décrits dans `TEST-REPORT.md` et ne constituent pas une note Lighthouse.
 
 ## Difficultés et apprentissages
 
-Le sous-chemin `/portfolio/` impose de ne pas utiliser des liens codés en dur depuis `/assets`. Le projet emploie `relative_url` et des imports relatifs. Les preuves publiques ne doivent pas être confondues avec la préparation des sources. Remplacer/compléter ces constats par une vraie difficulté rencontrée lors de ma séance, sa résolution et les résultats vérifiés.
+Le chemin du dépôt doit correspondre à `baseurl`. Une différence entre `/portfolio` et `/ns-portfolio` empêche de charger les ressources au bon endroit. Après correction, il faut attendre la publication et ouvrir le site pour vérifier le résultat.
 
-## Préparation à l’oral — quatre réponses à personnaliser
+Un workflow vert ne vérifie pas les faits écrits dans les pages. Je dois contrôler le contenu, les ressources et les compétences après chaque ajout. Je dois aussi pouvoir expliquer les fichiers préparés avec assistance.
 
-**1. Comment un fichier devient-il une page en ligne ?** Après un commit sur la branche publiée, GitHub lance Jekyll. Il lit le YAML et Markdown, applique les layouts, génère HTML et assets puis publie ces fichiers avec Pages. Le workflow se suit dans Actions ; la durée réelle reste à relever.
+## Préparation à l’oral
 
-**2. Que contrôler après un ajout ?** La carte, le compteur, la page, les images et la nouvelle colonne de compétences. Une coche verte ne valide pas le contenu : une erreur YAML ou un code inconnu peut produire un résultat incomplet sans bloquer la publication.
+**1. Comment un fichier devient-il une page en ligne ?** Un commit sur la branche publiée déclenche le workflow. Jekyll lit le YAML et le Markdown, applique les layouts et génère le HTML et les ressources. Pages publie ces fichiers. Ma publication relevée dans Actions a duré 49 secondes.
 
-**3. Mentions et captures de stage ?** Identifier l’éditeur et l’hébergeur, décrire le traitement réel des données et les licences. Avant diffusion, retirer secrets, IP internes et données de tiers, et obtenir l’accord de l’entreprise pour les captures de stage.
+**2. Que contrôler après un ajout ?** La carte, le compteur, la page et ses cinq parties, les images, les liens et la nouvelle colonne de compétences. Je lis aussi les journaux si quelque chose manque.
 
-**4. Compétence encore non prouvée et prochain projet ?** Le tableau n’associe aucun projet à c1, c2, c4 et c5 ; les preuves publiques de c3/c6 restent à compléter. Je choisirai avec mon formateur un vrai TP pour l’une de ces compétences. Aucun TP futur n’a encore été fourni : intitulé, objectif et preuve attendue à renseigner, sans annoncer une réalisation déjà faite.
+**3. Mentions et captures de stage ?** Identifier l’éditeur et l’hébergeur. Avant diffusion d’une capture, retirer les secrets et les données confidentielles et obtenir l’accord de l’entreprise.
+
+**4. Quelle compétence travailler ensuite ?** Les lignes c1, c2, c4 et c5 n’ont pas encore de projet associé. Je choisirai avec mon formateur un vrai TP pertinent, puis j’en documenterai les actions et les preuves. Je dois encore préciser l’intitulé de ce prochain travail.
+
+## Personnalisation restante
+
+Confirmer nom complet, lieu, matériel et logiciels réellement utilisés. Ajouter les preuves publiques et le résultat Lighthouse. Relire la fiche au passé avec ses propres mots et compléter la difficulté vécue. Ne pas annoncer comme effectuée une opération encore en attente.

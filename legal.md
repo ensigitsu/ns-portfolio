@@ -11,17 +11,19 @@ permalink: /mentions-legales/
 
 **{{ site.title }}**, étudiant en BTS SIO, option SISR. Portfolio personnel de formation, sans but commercial.
 
-{% if site.email != '' %}Contact public : [{{ site.email }}](mailto:{{ site.email }}).{% else %}**Contact public à renseigner avant publication.** Le nom civil complet et les informations d’identification nécessaires doivent être vérifiés par l’éditeur ; le nom d’affichage fourni est « Nathan S. ». Ne pas publier d’adresse privée.{% endif %}
+{% if site.email != '' %}Contact public : [{{ site.email }}](mailto:{{ site.email }}).{% else %}**Contact public à compléter.** Le nom civil complet et les informations d’identification nécessaires doivent être vérifiés par l’éditeur ; le nom d’affichage fourni est « Nathan S. ». Ne pas publier d’adresse privée.{% endif %}
 
-## Hébergeur prévu
+## Hébergeur
 
 **GitHub, Inc.**, au moyen du service GitHub Pages, États-Unis. Coordonnées indiquées par le modèle de classe : 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. [Informations et conditions de GitHub](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service) · [Assistance de GitHub](https://support.github.com/).
 
-La publication doit être réalisée et vérifiée par l’éditeur. Cette mention n’atteste pas d’un déploiement déjà effectué.
+Le portfolio est publié avec GitHub Pages depuis le dépôt `ensigitsu/ns-portfolio`.
 
 ## Vie privée et stockage local
 
-L’application ne contient aucun formulaire, aucune publicité, aucun pixel de suivi et aucune mesure d’audience. Elle ne dépose pas de cookie de suivi.
+Le portfolio ne contient aucune publicité, aucun pixel de suivi et aucune mesure d’audience. Il ne dépose pas de cookie de suivi.
+
+La démonstration du TP Web propose un champ de prénom. Ce texte est utilisé uniquement dans le navigateur pour afficher un message ; il n’est ni envoyé par le formulaire ni enregistré.
 
 La langue choisie peut être mémorisée sur cet appareil dans `localStorage`, sous la clé `nathan-language`. Cette préférence n’est pas envoyée à un service de traduction et peut être supprimée en effaçant les données du site. Le site reste utilisable si ce stockage est bloqué.
 
@@ -45,17 +47,19 @@ Les captures doivent être relues avant mise en ligne : retirer mots de passe, c
 
 **{{ site.title }}**, BTS SIO student specialising in systems and networks. Personal educational portfolio, with no commercial purpose.
 
-{% if site.email != '' %}Public contact: [{{ site.email }}](mailto:{{ site.email }}).{% else %}**A public contact must be configured before publication.** The publisher must verify the required identification details; the supplied display name is “Nathan S.”. Do not publish a private home address.{% endif %}
+{% if site.email != '' %}Public contact: [{{ site.email }}](mailto:{{ site.email }}).{% else %}**A public contact must be configured.** The publisher must verify the required identification details; the supplied display name is “Nathan S.”. Do not publish a private home address.{% endif %}
 
-## Intended hosting provider
+## Hosting provider
 
 **GitHub, Inc.**, through GitHub Pages, United States. Address provided by the class template: 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States. [GitHub terms and information](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service) · [GitHub support](https://support.github.com/).
 
-The publisher must deploy and verify the site. This notice does not claim that deployment has taken place.
+The portfolio is published with GitHub Pages from the `ensigitsu/ns-portfolio` repository.
 
 ## Privacy and local storage
 
-The application has no form, advertising, tracking pixel or audience analytics. It sets no tracking cookie.
+The portfolio has no advertising, tracking pixel or audience analytics. It sets no tracking cookie.
+
+The web exercise includes a first-name field. Its value is used only in the browser to display a message; the form does not send or store it.
 
 A language preference may be saved on this device in `localStorage`, under `nathan-language`. It is not sent to a translation service and can be removed by clearing this site’s data. The site remains usable if storage is blocked.
 

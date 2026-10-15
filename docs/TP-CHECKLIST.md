@@ -1,60 +1,61 @@
-# Atelier Portfolio — Q1 à Q7
+# Atelier Portfolio — réponses Q1 à Q7
 
-Brouillon du 12 octobre 2026. Sources pédagogiques : atelier 13 pages et fiche de réalisation 3 pages joints à la demande. Ne pas inventer les résultats encore absents.
+Mise à jour du 15 octobre 2026, à partir des PDF de l’atelier et des informations réellement fournies. La réponse Q3 correspond à la nouvelle fiche livrée ; l’envoyer sur GitHub et contrôler le site avant de rendre le devoir. Q6 nécessite encore une mesure réelle.
 
 ## Q1 — Adresse publique
 
-**À compléter après publication réussie et ouverture du site** : ____________________ . Copiez **Settings → Pages → Your site is live at**. Forme attendue : `https://VOTRE_PSEUDO.github.io/portfolio/` ; ceci est un modèle, pas une URL validée.
+L’adresse publique de mon portfolio est : https://ensigitsu.github.io/ns-portfolio/.
 
-## Q2 — Durée et panne
+## Q2 — Durée et croix rouge
 
-Durée réelle de la publication de l’identité dans **Actions** : ____ secondes. Exécution / commit : ____ . Cette durée n’a pas encore été mesurée.
+La publication de l’étape 3 a duré 49 secondes. Si elle se termine par une croix rouge, la nouvelle version n’est pas publiée. Les visiteurs continuent à voir la dernière version publiée avec succès. Il faut consulter le journal dans Actions, corriger le problème et relancer la publication.
 
-Si la construction échoue, la nouvelle version n’est pas publiée et les visiteurs conservent la dernière version publiée avec succès. Ouvrez le job en rouge et corrigez l’erreur avant le commit suivant.
+## Q3 — Premier projet ajouté et compétence justifiée
 
-## Q3 — Premier projet ajouté et justifications
+Le fichier de mon premier projet ajouté est `_projets/2026-10-decouverte-web.md`. Il s’intitule « Découverte du Web : une page interactive » et utilise le code `c6` : « Organiser son développement professionnel ».
 
-Le seul projet fourni est `_projets/2026-10-mon-portfolio.md`, adaptation de la réalisation initiale du modèle, associée à `[c3, c6]`. Il **ne constitue pas un deuxième projet réel ajouté pendant l’exercice**. L’ajout demandé reste à effectuer avec un vrai TP ou une mission ; ne pas reprendre le projet fictif de sauvegarde de la démonstration.
+La phrase de la page qui le justifie est : « J’ai documenté ce TP dans mon portfolio pour suivre mes acquis en HTML, CSS et JavaScript et identifier les points à approfondir pendant ma formation. »
 
-Pour le portfolio : c3 prépare la présence en ligne mais sa preuve de publication est en attente. Pour c6, la page explique que cartes, compteur et colonnes sont générés depuis les mêmes fichiers Markdown et que `_A-COPIER.md` permet de poursuivre la documentation.
-
-Premier nouveau projet réel : ______ . Fichier : ______ . Codes : ______ . Pour chaque code, recopiez la phrase factuelle du projet qui prouve l’action et son résultat : ______ .
+Cette fiche rassemble mon exercice, ses sources et les points à travailler. La date du 15 octobre est celle de sa documentation ; la date du TP en cours est à confirmer dans la fiche.
 
 ## Q4 — Pourquoi la coche verte ne suffit pas
 
-Elle indique que le workflow a terminé, pas que le contenu est correct. Un en-tête YAML ignoré peut laisser une carte vide, un code `C3` ne coche pas `c3`, un chemin d’image peut être faux alors que le site se construit.
+La coche verte indique que la publication s’est terminée sans erreur bloquante ; elle ne garantit pas que le contenu est juste. Une carte peut être vide à cause du YAML, une image peut avoir un mauvais chemin et un code de compétence peut être mal écrit.
 
-Après publication : vérifier titre et résumé de la carte, compteur, page détaillée et ses cinq sections, images, liens, colonne de la matrice et les codes attendus. Lire les avertissements du job `build`. Garder `title: "Projet : détail"`, les deux délimiteurs `---`, les noms de fichiers sans `_` initial et `future: true`.
+Après chaque publication, j’ouvre le site et je vérifie le titre et le résumé de la nouvelle carte, le compteur augmenté de un, la page complète avec ses cinq parties, les images et les liens. Je contrôle aussi la nouvelle colonne du tableau et ses compétences. En cas d’anomalie, je consulte les journaux du job build dans Actions.
 
-## Q5 — Éditeur, hébergeur et captures
+## Q5 — Éditeur, hébergeur et capture de stage
 
-Éditeur : Nathan S. (nom d’affichage fourni ; identité/contact public à finaliser). Hébergeur prévu : GitHub, Inc., via GitHub Pages. Les mentions identifient ces deux rôles et décrivent le stockage de la langue sur l’appareil.
+Mes mentions légales doivent identifier l’éditeur du site, c’est-à-dire moi, Nathan S., et l’hébergeur, GitHub, Inc., qui fournit GitHub Pages.
 
-Retirer notamment les mots de passe, clés, jetons, IP internes, noms et données de tiers : leur exposition peut compromettre le système et révéler des informations confidentielles. Une capture de stage nécessite l’autorisation de l’entreprise ; sinon produire une preuve dans un laboratoire autorisé.
+Avant de publier une capture de stage, je masque par exemple un mot de passe pour éviter de donner accès à un compte ou au système de l’entreprise. Je vérifie aussi les autres informations confidentielles et l’autorisation de l’entreprise.
 
 ## Q6 — Accessibilité Lighthouse
 
-**Note publique réelle : ____ / 100. Non mesurée.** URL, date, navigateur et appareil : ____ . Point signalé : ____ . Lancez Chrome/Edge → F12 → Lighthouse → Accessibility → Analyze page load.
+Ma note d’accessibilité Lighthouse est de [NOTE RÉELLE À RENSEIGNER] / 100.
 
-Si la note obtenue est 100, expliquer qu’une nouvelle image informative sans attribut `alt` peut faire échouer l’audit des textes alternatifs et abaisser la note. Ne pas transformer l’objectif 100 en résultat réel.
+Si ma note est inférieure à 100 : « Le point signalé par l’outil est : [RECOPIER UN POINT RÉEL DU RAPPORT]. »
 
-## Q7 — Routine d’ajout
+Si ma note est de 100 : « Une nouvelle image informative sans attribut alt pourrait faire baisser la note, car les personnes qui utilisent un lecteur d’écran ne disposeraient pas de son texte alternatif. »
 
-1. **Code → `_projets` → `_A-COPIER.md` → Copy raw file**.
-2. **`_projets` → Add file → Create new file**, nom `AAAA-MM-sujet.md`.
-3. Coller puis remplir titre, date réelle, contexte, résumé et codes prouvés.
-4. Rédiger les cinq sections avec les commandes et résultats effectifs.
-5. **Code → images → Add file → Upload files**, captures autorisées, noms et casse exacts ; ajouter leurs descriptions et chemins `relative_url` au projet.
-6. **Commit changes**, message précis ; **Actions**, attendre le workflow et lire ses journaux.
-7. **Settings → Pages → Visit site**, recharger, contrôler carte, compteur +1 et page détaillée.
-8. Sur l’accueil, vérifier la nouvelle colonne et chaque association du tableau, puis cliquer pour lire les preuves. Contrôler images, liens et mobile.
+Choisir seulement la phrase correspondant au résultat obtenu. Pour mesurer : ouvrir le site dans Chrome ou Edge sur ordinateur, appuyer sur F12, ouvrir Lighthouse, sélectionner Accessibility et lancer l’analyse. Ne pas recopier 100 sans l’avoir mesuré.
 
-## Preuves à joindre
+## Q7 — Étapes pour ajouter mon prochain TP
 
-- [ ] URL réelle et ouverture devant le jury.
-- [ ] Accueil avec compteur et matrice.
-- [ ] Mentions légales avec nom et hébergeur.
-- [ ] W3C : résultat réel sans erreur après corrections.
-- [ ] Lighthouse : note et périmètre réels.
-- [ ] Actions : workflow, commit et durée.
-- [ ] Premier nouveau TP réel ajouté et compétences justifiées.
+1. Dans GitHub, onglet Code, j’ouvre `_projets`, puis `_A-COPIER.md`, et je copie son contenu avec Copy raw file.
+2. Toujours dans `_projets`, je choisis Add file puis Create new file. Je donne un nom comme `2026-11-sujet-du-tp.md`, sans espace ni accent et sans tiret bas au début.
+3. Dans l’éditeur GitHub, je colle le modèle. Je renseigne le titre, la date réelle, le contexte, le résumé et les codes de compétences prouvés. Je conserve les deux lignes `---` et les guillemets autour des textes.
+4. Dans ce même fichier, je rédige les cinq parties : Contexte, Conditions et moyens, Description de l’activité, Productions et preuves, Ce que j’en retiens. Je décris uniquement les opérations et les résultats réels.
+5. Pour les captures, je les relis et masque les informations confidentielles. Dans Code, j’ouvre images, puis Add file et Upload files. Je reporte le chemin exact et une description dans la fiche du projet.
+6. Je clique sur Commit changes avec un message précis. Dans Actions, j’ouvre la publication, j’attends sa fin et je vérifie que build et deploy réussissent.
+7. Dans Settings, puis Pages, j’ouvre Visit site. Je recharge le site et je vérifie la nouvelle carte, le compteur augmenté de un, la page du projet, ses images et ses liens.
+8. Sur l’accueil du site, je contrôle la nouvelle colonne du tableau des compétences et je clique sur ses associations pour vérifier qu’elles mènent aux bonnes preuves. Je vérifie aussi l’affichage sur téléphone.
+
+## Avant de rendre
+
+- Envoyer les fichiers de la mise à jour, attendre la publication et ouvrir la démo du TP.
+- Confirmer la date exacte du TP et relire sa fiche avec ses propres mots.
+- Renseigner le contact public attendu par l’atelier dans `_config.yml` si nécessaire.
+- Mesurer Lighthouse pour terminer Q6 et lancer le validateur W3C sur l’URL publique.
+- Joindre les captures réelles demandées : accueil avec compteur et matrice, mentions, W3C, Lighthouse et Actions.
+- Personnaliser la fiche E5 : nom, lieu, matériel, vécu et preuves.
