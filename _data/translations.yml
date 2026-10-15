@@ -61,20 +61,15 @@ profile_title:
 
     Build what comes next.'
 profile_text:
-  fr:
-    Je suis Nathan, étudiant en première année de BTS SIO, option SISR. Je m’intéresse aux infrastructures,
+  fr: Je suis Nathan, étudiant en première année de BTS SIO, option SISR, en alternance. Je m’intéresse aux infrastructures,
     aux systèmes et aux réseaux qui rendent les services numériques possibles.
-  en:
-    I’m Nathan, a first-year BTS SIO student specialising in systems and networks. I’m interested in
+  en: I’m Nathan, a first-year BTS SIO systems and networks student on a work-study programme. I’m interested in
     the infrastructure that makes digital services possible.
 profile_text_2:
-  fr:
-    'Mon objectif à long terme : évoluer vers l’architecture cloud, avec une attention particulière
-    portée à la sécurité. Ce portfolio documente mes réalisations et les compétences que je construis
-    pendant ma formation.'
-  en:
-    My long-term goal is to move towards cloud architecture, with a particular focus on security. This
-    portfolio documents my work and the competencies I develop during my studies.
+  fr: 'Mon objectif à long terme : évoluer vers l’architecture cloud, avec une attention particulière portée à la
+    sécurité. Ce portfolio documente mes réalisations et les compétences que je construis pendant ma formation.'
+  en: My long-term goal is to move towards cloud architecture, with a particular focus on security. This portfolio
+    documents my work and the competencies I develop during my studies.
 current:
   fr: Actuellement
   en: Currently
@@ -82,8 +77,8 @@ year:
   fr: BTS SIO · Première année
   en: BTS SIO · First year
 specialty:
-  fr: Option SISR
-  en: Systems & networks
+  fr: Option SISR · En alternance
+  en: Systems & networks · Work-study programme
 direction:
   fr: Objectif à long terme
   en: Long-term goal
@@ -101,12 +96,9 @@ projects_title:
 
     The evidence.'
 projects_intro:
-  fr:
-    Une réalisation, un contexte, des décisions techniques. Chaque projet raconte ce qui a été fait
-    et ce qu’il reste à vérifier.
-  en:
-    A project, a context, technical decisions. Each entry explains what was done and what still needs
-    verification.
+  fr: Une réalisation, un contexte, des décisions techniques. Chaque projet raconte ce qui a été fait et ce qu’il
+    reste à vérifier.
+  en: A project, a context, technical decisions. Each entry explains what was done and what still needs verification.
 all:
   fr: Tous
   en: All
@@ -115,7 +107,7 @@ open_project:
   en: View project
 empty:
   fr: Aucun projet dans cette catégorie.
-  en: No projects in this category. 
+  en: No projects in this category.
 project_count:
   fr: réalisation documentée
   en: documented project
@@ -139,9 +131,7 @@ skills_title:
 
     before checkmarks.'
 skills_intro:
-  fr:
-    Les six compétences officielles du bloc 1. Chaque association renvoie à une réalisation et à son
-    état de preuve.
+  fr: Les six compétences officielles du bloc 1. Chaque association renvoie à une réalisation et à son état de preuve.
   en: The six official block 1 competencies. Each association links to a project and its evidence status.
 matrix_caption:
   fr: Tableau de synthèse · Bloc 1 — Support et mise à disposition de services informatiques
@@ -269,8 +259,8 @@ filter_label:
   fr: Filtrer les projets
   en: Filter projects
 site_description:
-  fr: 'Portfolio professionnel de Nathan S., étudiant en BTS SIO SISR : infrastructure, cloud et sécurité.'
-  en: Professional portfolio of Nathan S., a BTS SIO systems and networks student.
+  fr: 'Portfolio professionnel de Nathan, étudiant en BTS SIO SISR : infrastructure, cloud et sécurité.'
+  en: Professional portfolio of Nathan, a BTS SIO systems and networks student.
 section_context:
   fr: Contexte
   en: Context
@@ -286,3 +276,11 @@ section_evidence:
 section_learning:
   fr: Ce que j’en retiens
   en: Lessons learned
+profile_skills_title:
+  fr: Mes premières réalisations
+  en: My first practical work
+profile_skills_text:
+  fr: Je structure une page en HTML, j’organise sa présentation avec CSS et je publie mes projets sur GitHub Pages.
+    Mon TP Web et ce portfolio illustrent ces premiers acquis, avec une relecture technique assistée.
+  en: I structure pages with HTML, organise their presentation with CSS and publish projects through GitHub Pages.
+    My web exercise and this portfolio document these initial skills, with assisted technical review.

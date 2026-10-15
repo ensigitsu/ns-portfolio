@@ -55,7 +55,7 @@ function applyLanguage(next, persist = false) {
     el.setAttribute('aria-pressed', String(el.dataset.language === language));
   });
   const title = document.body.dataset[language === 'fr' ? 'titleFr' : 'titleEn'];
-  document.title = `${title || 'Nathan S.'} — BTS SIO SISR`;
+  document.title = `${title || 'Nathan'} — BTS SIO SISR`;
   if (persist) {
     try {
       localStorage.setItem('nathan-language', language);

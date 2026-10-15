@@ -11,7 +11,7 @@ permalink: /mentions-legales/
 
 **{{ site.title }}**, étudiant en BTS SIO, option SISR. Portfolio personnel de formation, sans but commercial.
 
-{% if site.email != '' %}Contact public : [{{ site.email }}](mailto:{{ site.email }}).{% else %}**Contact public à compléter.** Le nom civil complet et les informations d’identification nécessaires doivent être vérifiés par l’éditeur ; le nom d’affichage fourni est « Nathan S. ». Ne pas publier d’adresse privée.{% endif %}
+{% if site.email != '' %}Contact public : [{{ site.email }}](mailto:{{ site.email }}).{% else %}**Contact public à compléter.** Le nom civil complet et les informations d’identification nécessaires doivent être vérifiés par l’éditeur ; le nom d’affichage fourni est « Nathan ». Ne pas publier d’adresse privée.{% endif %}
 
 ## Hébergeur
 
@@ -47,7 +47,7 @@ Les captures doivent être relues avant mise en ligne : retirer mots de passe, c
 
 **{{ site.title }}**, BTS SIO student specialising in systems and networks. Personal educational portfolio, with no commercial purpose.
 
-{% if site.email != '' %}Public contact: [{{ site.email }}](mailto:{{ site.email }}).{% else %}**A public contact must be configured.** The publisher must verify the required identification details; the supplied display name is “Nathan S.”. Do not publish a private home address.{% endif %}
+{% if site.email != '' %}Public contact: [{{ site.email }}](mailto:{{ site.email }}).{% else %}**A public contact must be configured.** The publisher must verify the required identification details; the supplied display name is “Nathan”. Do not publish a private home address.{% endif %}
 
 ## Hosting provider
 

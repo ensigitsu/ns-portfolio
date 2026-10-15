@@ -6,6 +6,6 @@
 | Three.js et addons GLTFLoader / BufferGeometryUtils | 0.170.0 | MIT | assets/vendor/THREE-LICENSE.txt |
 | Manrope, fonte variable latine | @fontsource-variable/manrope 5.1.0 | SIL OFL 1.1 | assets/fonts/OFL.txt |
 | Jekyll | ~> 3.10.0, installé lors de la construction, non embarqué | MIT | https://github.com/jekyll/jekyll/blob/master/LICENSE |
-| Contenus et SVG originaux | Nathan S., préparation avec assistance IA | CC BY 4.0 | CONTENT-LICENSE.md |
+| Contenus et SVG originaux | Nathan, préparation avec assistance IA | CC BY 4.0 | CONTENT-LICENSE.md |
 
 Le frontend du modèle a été réécrit ; les conventions YAML, la collection `projets`, les six libellés et le parcours de publication sont conservés. Aucun exemple fictif du modèle n’est présenté comme une réalisation de Nathan. Three.js et la police sont servis localement ; les ressources sont présentes dans le ZIP. Les PDFs pédagogiques ne sont pas redistribués dans le projet.

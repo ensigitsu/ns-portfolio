@@ -1,63 +1,57 @@
 # GitHub Pages deployment
 
-## Update the existing repository
+## Current repository
 
-The working repository is `ensigitsu/ns-portfolio`. Its public URL is https://ensigitsu.github.io/ns-portfolio/. Keep that name when applying this update.
+Repository: https://github.com/ensigitsu/ns-portfolio. Website: https://ensigitsu.github.io/ns-portfolio/.
 
-1. Extract `correctifs-portfolio.zip` and open `a-envoyer`.
-2. Open the repository's **Code** tab at its root, then **Add file → Upload files**.
-3. Drag the files and folders inside `a-envoyer` into the upload area. Drag actual folders to preserve their paths. Do not upload the ZIP or the enclosing `a-envoyer` folder.
-4. Check paths such as `_data/translations.yml`, `_projets/2026-10-decouverte-web.md` and `scripts/validate.py`. Commit to `main`.
-5. Open **Actions**, wait for the new publication to succeed, then reload the public website. There should still be two cards, a count of 02 and two project columns.
-
-This small patch does not replace `_config.yml`. Enter personal information only after checking what the student wants to publish.
-
-## Install the complete source instead
-
-Extract `nathan-portfolio.zip`, open its `portfolio` folder, and upload that folder's contents to the repository root. The root must contain `_config.yml`, `index.html`, `Gemfile`, `_data`, `_includes`, `_layouts`, `_projets` and `assets`.
-
-Keep `OPEN-ME.html`, `START-HERE.txt`, `INFOS-ET-CAPTURES.txt` and `local-preview` on the computer. They are viewing aids, not the Jekyll publication source. Do not add `.nojekyll`, upload `_site` or put the whole source under an extra repository subfolder.
-
-The current configuration is:
+Keep the current configuration:
 
 ```yaml
 url: https://ensigitsu.github.io
 baseurl: /ns-portfolio
 ```
 
-For a different repository name, change `baseurl` to that repository's path. The workshop's example name `portfolio` would require `/portfolio`; it is not the current repository name.
+The workshop example repository name portfolio would instead require /portfolio. No rename is part of this update.
 
-The old template file `mentions-legales.md` is excluded in `_config.yml`. The active legal page is `legal.md`, which keeps the public route `/mentions-legales/`. The unused template layout and stylesheet may remain without affecting the active layout.
+## Apply the personalised patch
 
-## Publishing settings
+1. Extract mise-a-jour-personnalisee.zip and open a-envoyer.
+2. At repository root, use Code, Add file, Upload files.
+3. Drag the files and folders inside a-envoyer, preserving their paths. Upload the contents rather than the ZIP or parent folder.
+4. This patch includes _config.yml with the supplied public name and contact. Review those values before committing.
+5. Commit to main, wait for Actions and reload the public website.
+6. Check name, email, dates, two projects, count 02, evidence images and matrix.
 
-The existing site is already published. There is no need to reset its settings for each update.
+The source patch has not been committed by the assistant. The About website link is already configured.
 
-If configuring a fresh repository, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save. GitHub Pages runs Jekyll for this source. A Node build is not required.
+## Complete-source installation
 
-In **Code → About → gear**, select **Use your GitHub Pages website** and save. This displays the public link on the repository page. It is an account-side action, not a source-file change.
+Extract nathan-portfolio.zip and upload only the contents of its portfolio folder. The repository root must contain _config.yml, index.html, Gemfile, _data, _includes, _layouts, _projets and assets.
 
-## Verify the result
+Keep the enclosing folder, OPEN-ME.html, local-preview and guides on the computer. Do not upload the ZIP, add .nojekyll or replace source with a generated _site directory.
 
-A green workflow means the deployment completed. Also check the actual page, count, matrix, images, links and demo. A failed publication does not replace the last successful version.
+For a fresh repository, configure Settings, Pages, Deploy from a branch, main, / (root), then Save. Existing publication settings do not need to be reset after each upload.
 
-The public browser check on 15 October 2026 confirmed both projects, their matrix associations, French/English switching and the demo's greeting, five-click message and reset. The student reported a 49-second successful publication; that duration also appeared in the public Actions history. This new source patch still needs the student's upload.
+The old mentions-legales.md template file is excluded; legal.md is active. The unused original layout and stylesheet do not affect the active design.
 
-The remaining personal information and evidence are listed in `FINISHING-THE-ASSIGNMENT.md`. A local HTML validator does not supply a Lighthouse score.
+## Validation
+
+The supplied Lighthouse screenshot shows Accessibility 100/100. The public W3C result on 15 October had no errors or warnings. Those results concern the public version before the personal update.
+
+After publishing, open both projects, verify the images and links, try FR/EN and the demo, and check the phone layout. Repeat quality checks after changes. A green workflow alone does not establish correct content.
 
 ## Troubleshooting
 
 | Symptom | Check |
 | --- | --- |
-| Raw YAML or Liquid text after opening a local file | Open the archive's `OPEN-ME.html`; source HTML needs a Jekyll build |
-| CSS or images missing online | Keep `baseurl: /ns-portfolio`; preserve folders and exact filename case |
-| Missing include such as translation.html | Upload the complete `_includes` folder with its paths |
-| New project absent | Put the Markdown file in `_projets`, preserve its front matter and wait for Actions |
-| Missing competency | Use the exact codes `c1` to `c6`, with evidence supporting each selected code |
-| Old page still visible | Check the latest workflow, the public URL and a hard refresh |
-| Build succeeds but evidence label remains | `evidence_pending: true` remains until real evidence is attached |
+| Raw YAML or Liquid after local double-click | Open OPEN-ME.html; source HTML needs Jekyll |
+| CSS or images absent online | Preserve /ns-portfolio and exact folder paths |
+| Missing translation.html include | Upload the complete _includes folder |
+| New project absent | Put the Markdown file in _projets with valid front matter |
+| Missing competency | Use exact c1-c6 codes and justified evidence |
+| Old version | Latest Actions result, actual public URL and hard refresh |
 
-For a repeat upload problem, GitHub Desktop can clone the existing repository, accept the extracted source files, commit and push. Keep Desktop's own Git metadata; it is not part of this archive.
+See FINISHING-THE-ASSIGNMENT.md for the last publication and submission steps.
 
 Official references:
 - https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository

@@ -1,63 +1,75 @@
-# Fiche de réalisation professionnelle — brouillon E5
+# Fiche de réalisation professionnelle - version publique
 
 **Intitulé :** Mise en ligne de mon portfolio professionnel.  
-**Nom et prénom :** Nathan S. — nom civil complet à renseigner par l’étudiant.  
-**Préparation des sources :** à partir du 12 octobre 2026.  
-**Publication confirmée :** 14 octobre 2026.  
-**Durée d’une publication réussie relevée dans Actions :** 49 secondes.  
-**Lieu, matériel personnel et navigateur :** à compléter avec les conditions réelles.
+**Nom public :** Nathan. Le nom complet figure uniquement dans le PDF séparé destiné au professeur.  
+**Date de la séance :** 15 octobre 2026.  
+**Lieu :** en classe et à domicile.  
+**Situation :** première année de BTS SIO, option SISR, en alternance.  
+**Matériel et logiciels :** PC portable, Windows 11, Microsoft Edge et Visual Studio Code.
 
 ## Contexte
 
-Pour l’épreuve E5 et ma présentation professionnelle, j’ai besoin de documenter mes réalisations en BTS SIO, option SISR. Le site publié est consultable à l’adresse https://ensigitsu.github.io/ns-portfolio/. Les sources sont dans https://github.com/ensigitsu/ns-portfolio.
+J’ai besoin d’une présentation de mes réalisations pour suivre mes acquis, préparer l’oral E5 et montrer mon travail pendant ma formation en alternance. Mon site est https://ensigitsu.github.io/ns-portfolio/ et ses sources sont dans le dépôt public ensigitsu/ns-portfolio.
+
+La séance portfolio a eu lieu le 15 octobre 2026. Le TP Web a été réalisé seul le 12 octobre, puis documenté le 15 octobre. La première mise en ligne du portfolio avait déjà été confirmée le 14 octobre.
 
 ## Compétences mobilisées
 
-| Code | Libellé exact du bloc 1 | Action et preuve |
+| Code | Libellé officiel | Action et preuve |
 | --- | --- | --- |
-| c3 | Développer la présence en ligne de l’organisation | Portfolio publié, URL et dépôt disponibles ; captures et contrôles publics à joindre |
-| c6 | Organiser son développement professionnel | Fiches Markdown et matrice pour suivre les réalisations ; TP Web publié avec ses sources |
+| c3 | Développer la présence en ligne de l’organisation | Portfolio publié, contact, mentions, contrôle W3C et rapport Lighthouse |
+| c6 | Organiser son développement professionnel | Deux fiches, preuves, modèle Markdown et matrice de suivi |
 
-Ces associations doivent être expliquées à partir du travail réel et relues avec le professeur. Elles ne remplacent pas une validation du jury. Le nouveau TP est associé seulement à c6.
+Ces associations décrivent le travail documenté ; elles ne remplacent pas l’évaluation du professeur ou du jury.
 
 ## Conditions et moyens
 
-Le modèle Jekyll du professeur a été adapté avec une assistance IA dans ChatGPT Work. Les sources utilisent HTML, CSS, JavaScript, Markdown, YAML et GLSL. Le hero utilise Three.js ; le fond utilise WebGL natif. La police et les ressources de l’interface sont locales.
+J’ai travaillé seul, en classe et à domicile, sur un PC portable sous Windows 11, avec Microsoft Edge et Visual Studio Code. J’ai utilisé mon compte GitHub et le modèle Jekyll du professeur.
 
-Le dépôt public `ensigitsu/ns-portfolio` est publié avec GitHub Pages, branche `main`, dossier racine. Jekyll génère les pages de la collection `_projets` sans plugin personnalisé. `baseurl` correspond au chemin `/ns-portfolio`.
+J’ai choisi les idées, le contenu et la présentation. L’adaptation et la relecture technique des sources ont été préparées avec une assistance IA dans ChatGPT Work. Je dois comprendre les corrections et pouvoir expliquer les fichiers.
 
-Les sources originales sont sous licence MIT et leurs contenus originaux sous CC BY 4.0, sous réserve des droits de tiers. Les notices des bibliothèques sont conservées. Le contact public et l’identité à afficher doivent être vérifiés par l’étudiant. Les captures doivent être relues et autorisées.
+Le site utilise HTML, CSS, JavaScript, Markdown, YAML et des shaders pour les effets. GitHub Pages publie la branche main, dossier racine, avec baseurl /ns-portfolio. La langue peut être mémorisée localement ; le formulaire de démonstration traite le prénom seulement dans le navigateur. Les licences et notices sont conservées.
 
 ## Description de l’activité
 
-J’ai fait préparer les sources de mon portfolio à partir du modèle du professeur. J’ai conservé la collection des réalisations, les six libellés officiels et la génération automatique des cartes, du compteur et de la matrice. J’ai fait adapter l’interface en français et en anglais et conserver le liquid dans le hero avec des reflets aquatiques en arrière-plan.
+J’ai fait adapter le modèle de classe à ma présentation et conservé les six compétences officielles. Les fiches Markdown génèrent les pages, les cartes, le compteur et les colonnes de la matrice.
 
-J’ai téléversé les fichiers et leurs dossiers dans le dépôt GitHub, activé Pages et suivi les étapes build et deploy dans Actions. Le site a d’abord présenté un problème d’affichage : les chemins utilisaient `/portfolio/` alors que mon dépôt est nommé `ns-portfolio`. J’ai fait corriger la configuration puis confirmé que le site était accessible. Une publication réussie a duré 49 secondes.
+J’ai envoyé les fichiers et dossiers dans GitHub, suivi build et deploy dans Actions et contrôlé le site public. Une publication réussie a duré 49 secondes. Le mauvais chemin /portfolio a été corrigé en /ns-portfolio pour charger les ressources du dépôt réel.
 
-J’ai transmis mon exercice de découverte du Web pour en préparer une deuxième fiche. La démonstration contient une saisie de prénom, un message, un compteur, une condition à cinq clics et une remise à zéro. La relecture et les corrections ont été faites avec assistance ; je dois comprendre le code et savoir le présenter. La fiche et la démonstration sont publiées. Le 15 octobre 2026, j’ai fait contrôler les deux cartes, le compteur 02, la matrice et les interactions dans la démonstration publique.
+J’ai fourni mon TP Web pour créer une deuxième fiche. J’ai personnellement réalisé la maquette, les idées, le contenu et la mise en page. La relecture a simplifié le CSS et conservé le compteur, le message à cinq clics et la remise à zéro.
+
+Le 15 octobre, j’ai transmis les captures sur téléphone et le rapport Lighthouse qui affiche 100/100 en accessibilité. Le contrôle public W3C ne signale aucune erreur ni avertissement. Les captures de la version vérifiée sont jointes dans assets/evidence/2026-10 ; elles précèdent l’actualisation du prénom public et du contact.
 
 ## Productions et preuves
 
-Disponibles : URL du portfolio, dépôt public, historique Actions, sources Jekyll complètes, deux fiches de projets et quatre fichiers de démonstration du TP Web.
+- Portfolio public et dépôt des sources.
+- Deux fiches, compteur 02 et matrice à six lignes.
+- Publication de 49 secondes : https://github.com/ensigitsu/ns-portfolio/actions/runs/38771346787.
+- Historique : https://github.com/ensigitsu/ns-portfolio/commits/main/.
+- Rapport Lighthouse réel : 100/100 en accessibilité.
+- Capture W3C : aucune erreur ni avertissement.
+- Captures d’accueil, de matrice, de mentions et de projets sur téléphone.
 
-À joindre : capture réelle de l’accueil après ajout du TP avec compteur 02 et matrice ; capture des mentions ; résultat W3C ; note Lighthouse ; capture du workflow avec durée. Les contrôles locaux sont décrits dans `TEST-REPORT.md` et ne constituent pas une note Lighthouse.
+Le PDF destiné au professeur rassemble les réponses Q1-Q7, la fiche personnelle et les annexes. Il est livré séparément et ne doit pas être envoyé sur le dépôt public.
 
 ## Difficultés et apprentissages
 
-Le chemin du dépôt doit correspondre à `baseurl`. Une différence entre `/portfolio` et `/ns-portfolio` empêche de charger les ressources au bon endroit. Après correction, il faut attendre la publication et ouvrir le site pour vérifier le résultat.
+Le nom du dépôt et baseurl étaient différents. Les ressources étaient demandées sous /portfolio au lieu de /ns-portfolio. Après correction et publication, l’affichage a fonctionné.
 
-Un workflow vert ne vérifie pas les faits écrits dans les pages. Je dois contrôler le contenu, les ressources et les compétences après chaque ajout. Je dois aussi pouvoir expliquer les fichiers préparés avec assistance.
+Lors de la relecture du TP Web, les règles CSS imbriquées avec un deuxième body ont été remplacées par des sélecteurs à plat. Cette correction a été préparée avec assistance.
+
+Je retiens la structure HTML, la mise en page CSS et le suivi d’une publication GitHub Pages. Une coche verte ne dispense pas de contrôler le contenu et les preuves sur le site.
 
 ## Préparation à l’oral
 
-**1. Comment un fichier devient-il une page en ligne ?** Un commit sur la branche publiée déclenche le workflow. Jekyll lit le YAML et le Markdown, applique les layouts et génère le HTML et les ressources. Pages publie ces fichiers. Ma publication relevée dans Actions a duré 49 secondes.
+**1. Comment le fichier devient-il une page ?** Un commit déclenche la publication. Jekyll lit YAML et Markdown, applique les layouts et génère les fichiers que Pages sert aux visiteurs. Je suis le résultat dans Actions ; une exécution observée a duré 49 secondes.
 
-**2. Que contrôler après un ajout ?** La carte, le compteur, la page et ses cinq parties, les images, les liens et la nouvelle colonne de compétences. Je lis aussi les journaux si quelque chose manque.
+**2. Que contrôler après un ajout ?** La carte, le compteur, la page et ses cinq parties, les images, les liens et la colonne de compétences. La coche verte confirme le processus, pas la justesse du contenu.
 
-**3. Mentions et captures de stage ?** Identifier l’éditeur et l’hébergeur. Avant diffusion d’une capture, retirer les secrets et les données confidentielles et obtenir l’accord de l’entreprise.
+**3. Mentions et captures ?** Identifier l’éditeur et l’hébergeur. Avant publication, retirer les secrets et données confidentielles, puis vérifier les droits et l’autorisation de l’entreprise.
 
-**4. Quelle compétence travailler ensuite ?** Les lignes c1, c2, c4 et c5 n’ont pas encore de projet associé. Je choisirai avec mon formateur un vrai TP pertinent, puis j’en documenterai les actions et les preuves. Je dois encore préciser l’intitulé de ce prochain travail.
+**4. Quelle compétence travailler ensuite ?** Le prochain TP n’est pas encore choisi. Une piste à discuter avec mon formateur serait un inventaire de poste pour documenter c1, Gérer le patrimoine informatique. Ce sujet est une proposition, pas une réalisation déjà effectuée ou programmée.
 
-## Personnalisation restante
+## Avant remise
 
-Confirmer nom complet, lieu, matériel et logiciels réellement utilisés. Ajouter les preuves publiques et le résultat Lighthouse. Relire la fiche au passé avec ses propres mots et compléter la difficulté vécue. Ne pas annoncer comme effectuée une opération encore en attente.
+Publier les fichiers personnalisés, vérifier le résultat réel, puis relire le PDF. Les résultats du 15 octobre restent datés de cette version ; refaire les contrôles après des changements.
