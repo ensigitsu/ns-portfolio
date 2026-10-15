@@ -54,7 +54,7 @@ J’ai documenté ce TP dans mon portfolio pour suivre mes acquis en HTML, CSS e
 
 Les fichiers corrigés constituent les productions disponibles. La vérification locale contrôle le message avec un prénom, le compteur, le changement à cinq clics, la remise à zéro et l’absence de rechargement lors de la soumission. Le rapport se trouve dans `docs/TEST-REPORT.md`.
 
-**À compléter après l’envoi sur GitHub :** ouvrir la démonstration publique et ajouter une capture personnelle montrant le compteur et le message. Les liens GitHub de cette fiche deviennent disponibles après la publication des nouveaux fichiers. Aucune capture de publication n’a été inventée.
+La démonstration et les fichiers sont publiés. Le contrôle du 15 octobre 2026 a confirmé le message personnalisé, le compteur, le changement à cinq clics et la remise à zéro dans un navigateur. **Reste à joindre :** une capture réelle de la démonstration, et la date du TP en cours à confirmer. Les captures ne sont pas encore présentes dans cette fiche.
 
 ### Compétence associée
 

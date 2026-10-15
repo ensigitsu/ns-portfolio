@@ -16,7 +16,7 @@ Pour l’épreuve E5 et ma présentation professionnelle, j’ai besoin de docum
 | Code | Libellé exact du bloc 1 | Action et preuve |
 | --- | --- | --- |
 | c3 | Développer la présence en ligne de l’organisation | Portfolio publié, URL et dépôt disponibles ; captures et contrôles publics à joindre |
-| c6 | Organiser son développement professionnel | Fiches Markdown et matrice pour suivre les réalisations ; ajout du TP Web préparé avec ses sources |
+| c6 | Organiser son développement professionnel | Fiches Markdown et matrice pour suivre les réalisations ; TP Web publié avec ses sources |
 
 Ces associations doivent être expliquées à partir du travail réel et relues avec le professeur. Elles ne remplacent pas une validation du jury. Le nouveau TP est associé seulement à c6.
 
@@ -34,7 +34,7 @@ J’ai fait préparer les sources de mon portfolio à partir du modèle du profe
 
 J’ai téléversé les fichiers et leurs dossiers dans le dépôt GitHub, activé Pages et suivi les étapes build et deploy dans Actions. Le site a d’abord présenté un problème d’affichage : les chemins utilisaient `/portfolio/` alors que mon dépôt est nommé `ns-portfolio`. J’ai fait corriger la configuration puis confirmé que le site était accessible. Une publication réussie a duré 49 secondes.
 
-J’ai transmis mon exercice de découverte du Web pour en préparer une deuxième fiche. La démonstration contient une saisie de prénom, un message, un compteur, une condition à cinq clics et une remise à zéro. La relecture et les corrections ont été faites avec assistance ; je dois comprendre le code et savoir le présenter. Cette mise à jour reste à envoyer sur GitHub et à vérifier publiquement.
+J’ai transmis mon exercice de découverte du Web pour en préparer une deuxième fiche. La démonstration contient une saisie de prénom, un message, un compteur, une condition à cinq clics et une remise à zéro. La relecture et les corrections ont été faites avec assistance ; je dois comprendre le code et savoir le présenter. La fiche et la démonstration sont publiées. Le 15 octobre 2026, j’ai fait contrôler les deux cartes, le compteur 02, la matrice et les interactions dans la démonstration publique.
 
 ## Productions et preuves
 

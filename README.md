@@ -12,7 +12,7 @@ The HTML inside `portfolio` is Jekyll source. Opening `portfolio/index.html` dir
 
 1. Extract `nathan-portfolio.zip` and open its `portfolio` folder.
 2. Use the existing public repository `ensigitsu/ns-portfolio`. The sources come from the [teacher’s template](https://github.com/AbidHamza/modele-portfolio-bts-sio).
-3. If starting from that template, delete its old `mentions-legales.md` before uploading `legal.md`, because both would otherwise generate the same legal URL. The old `_layouts/projet.html` and `css/style.css` are no longer used and can also be removed.
+3. The old template file `mentions-legales.md` is excluded by `_config.yml`. The active legal page is `legal.md`; the unused template layout and stylesheet do not affect this layout.
 4. Open **Code → Add file → Upload files**. Upload the **contents** of the extracted folder, with `_config.yml` and `index.html` directly at repository root. Commit to `main`.
 5. The configuration is prepared for `url: https://ensigitsu.github.io` and `baseurl: /ns-portfolio`. The path must match the GitHub repository name. Fill the appropriate public contact details before completing the academic evidence.
 6. Open **Settings → Pages → Deploy from a branch → main → / (root) → Save**.
@@ -41,7 +41,7 @@ The teacher’s `_projets` collection, template filename, competency data filena
 
 `_projets/2026-10-decouverte-web.md` documents the four-file exercise supplied by the student. Its cleaned demonstration is in `assets/demos/web-basics/`: HTML, CSS, JavaScript and the original SVG illustration. The first-name greeting, click counter, five-click message and reset action are preserved. The page can also be opened directly from the extracted source folder.
 
-The new project uses competency `c6` and includes an exact supporting sentence. Its date is explicitly the documentation date; the student must confirm the original classroom date and add a real public screenshot. The source now generates two projects. New files still need to be uploaded by the student before this addition appears on the public website. See `docs/TP-WEB-INTEGRATION.md`.
+The new project uses competency `c6` and includes an exact supporting sentence. Its date is explicitly the documentation date; the student must confirm the original classroom date and add a real public screenshot. The source now generates two projects. The exercise is published. A live check on 15 October 2026 confirmed both project cards, count 02, matrix associations and the demo interactions. See `docs/TP-WEB-INTEGRATION.md` and `docs/FINISHING-THE-ASSIGNMENT.md`.
 
 ## Local preview
 

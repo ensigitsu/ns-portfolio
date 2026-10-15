@@ -1,6 +1,6 @@
 # Atelier Portfolio — réponses Q1 à Q7
 
-Mise à jour du 15 octobre 2026, à partir des PDF de l’atelier et des informations réellement fournies. La réponse Q3 correspond à la nouvelle fiche livrée ; l’envoyer sur GitHub et contrôler le site avant de rendre le devoir. Q6 nécessite encore une mesure réelle.
+Mise à jour du 15 octobre 2026, à partir des PDF de l’atelier et des informations réellement fournies. La réponse Q3 correspond au TP Web publié et vérifié le 15 octobre 2026. Q6 nécessite encore une mesure réelle dans le navigateur de l’étudiant.
 
 ## Q1 — Adresse publique
 
@@ -53,7 +53,7 @@ Choisir seulement la phrase correspondant au résultat obtenu. Pour mesurer : ou
 
 ## Avant de rendre
 
-- Envoyer les fichiers de la mise à jour, attendre la publication et ouvrir la démo du TP.
+- Publier les dernières corrections, attendre Actions et vérifier les pages publiques.
 - Confirmer la date exacte du TP et relire sa fiche avec ses propres mots.
 - Renseigner le contact public attendu par l’atelier dans `_config.yml` si nécessaire.
 - Mesurer Lighthouse pour terminer Q6 et lancer le validateur W3C sur l’URL publique.

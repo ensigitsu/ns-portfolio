@@ -1,37 +1,40 @@
-# État du devoir — 15 octobre 2026
+# Assignment status — 15 October 2026
 
-Cet état reprend les PDF de l’atelier et de la fiche E5. Il ne remplace ni le barème ni la correction du professeur.
+This audit uses the supplied 13-page workshop, 3-page E5 sheet, public website and repository. It does not replace the teacher's assessment.
 
-## Présent dans les sources livrées
+## Confirmed
 
-- Portfolio Jekyll avec deux réalisations, compteur et matrice automatiques.
-- Projet du portfolio actualisé avec l’URL publique et les 49 secondes communiquées pour une publication réussie.
-- Vrai exercice fourni dans `nathans-mon-site.zip`, documenté dans `_projets/2026-10-decouverte-web.md` et accompagné de ses quatre fichiers de démonstration corrigés.
-- Code c6 justifié par une phrase exacte ; date du TP distinguée de la date de documentation.
-- Cinq parties dans les fiches, six libellés officiels, modèle `_A-COPIER.md` exclu du site.
-- Interface bilingue, mentions, licences, liquid dans le hero et reflets aquatiques en fond.
-- Sources complètes et aperçu local séparé.
+- Two published projects, count 02 and an automatically generated competency matrix.
+- Five academic sections in each project; six official competency labels.
+- Portfolio associated with c3/c6; supplied Web exercise associated with c6 only.
+- Public project, demo and source links available.
+- Live greeting, five-click message, reset and language switching checked in a browser.
+- A successful 49-second publication reported by the student and visible in Actions.
+- Jekyll-compatible source, legal page, licence notices and a separate local preview.
 
 ## Questions
 
-| Question | État | À faire |
+| Question | Status | Remaining input |
 | --- | --- | --- |
-| Q1 | Renseignée | Utiliser l’URL `https://ensigitsu.github.io/ns-portfolio/` |
-| Q2 | Renseignée | 49 secondes, durée communiquée par l’étudiant ; conserver la capture Actions |
-| Q3 | Préparée | Envoyer la nouvelle fiche et la démo, puis contrôler le site ; relire la phrase c6 |
-| Q4 | Rédigée | Réaliser les contrôles après l’envoi |
-| Q5 | Rédigée | Vérifier les données publiques des mentions et joindre la capture |
-| Q6 | À mesurer | Relever la note réelle de Lighthouse et un point du rapport, ou expliquer l’erreur possible si 100 |
-| Q7 | Rédigée | Savoir expliquer et suivre la procédure |
+| Q1 | Actual URL known | https://ensigitsu.github.io/ns-portfolio/ |
+| Q2 | Answer prepared | Retain a real Actions capture showing the successful run and its duration |
+| Q3 | Project published and checked | Confirm classroom date and add a real demo capture |
+| Q4 | Explanation prepared; public checks performed | Repeat after the last upload |
+| Q5 | Publisher and hosting roles documented | Confirm public name/contact; capture the final legal page |
+| Q6 | Incomplete | Actual Lighthouse Accessibility score and one reported point, or the requested image explanation for a score of 100 |
+| Q7 | Procedure prepared | Read and be able to explain the steps |
 
-## Ordre pour terminer
+## Finish in this order
 
-1. Extraire la mise à jour et envoyer les fichiers et dossiers à la racine de `ensigitsu/ns-portfolio` en conservant leurs chemins.
-2. Attendre la réussite dans Actions ; ouvrir le site et vérifier deux cartes, le compteur 02, les pages et les colonnes de compétences.
-3. Ouvrir la démo du TP, essayer un prénom, cinq clics puis la remise à zéro. Confirmer la date du TP dans sa fiche.
-4. Compléter le contact public attendu par l’atelier dans `_config.yml` si nécessaire, puis vérifier les mentions.
-5. Lancer le validateur W3C et Lighthouse sur le site public ; corriger les problèmes réels, conserver les résultats et terminer Q6.
-6. Faire les captures demandées : accueil avec compteur et matrice, mentions, Actions, W3C et Lighthouse. Relire chaque capture avant publication.
-7. Personnaliser la fiche E5 et rendre l’URL avec les réponses Q1 à Q7. Pouvoir expliquer le code et l’assistance utilisée.
+1. Apply the source maintenance patch without replacing personal configuration.
+2. Provide the actual identity, dates, working conditions, skills and project role listed in `FINISHING-THE-ASSIGNMENT.md`.
+3. Integrate those facts into the site, project files and E5 draft, then publish.
+4. Run Lighthouse in the student's Chrome or Edge and perform the phone check.
+5. Capture the final public homepage, matrix, legal page, Actions, demo and W3C result. Public captures can be collected by the assistant after publication.
+6. Attach the actual evidence, complete Q6 and produce the student's final PDF. Recheck the final published version.
 
-Les six compétences ne doivent pas toutes être cochées pour cet atelier. Les lignes encore vides seront complétées avec d’autres travaux réellement effectués pendant la formation.
+The repository's About website field was empty during the audit. The student can add it through **Code → About → gear → Use your GitHub Pages website → Save changes**.
+
+The repository is named `ns-portfolio`, whereas the workshop asks for `portfolio`. The deployed URL works with the current name. Keep the current configuration for this update and use the actual URL in the submission; ask the teacher if the exact repository name is being assessed before considering a rename.
+
+All six competencies do not need a project today. Fill the other rows later with genuine work and justified evidence.

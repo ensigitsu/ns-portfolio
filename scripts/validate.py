@@ -73,7 +73,13 @@ for path in sorted((ROOT / '_projets').glob('*.md')):
 for name in ['github_url', 'linkedin', 'repository_url']:
     if config.get(name):
         check(config[name].startswith('https://'), f'{name}: expected an HTTPS URL')
-check(config.get('baseurl') == '/portfolio', 'Expected baseurl /portfolio')
+baseurl = config.get('baseurl', '')
+check(
+    isinstance(baseurl, str) and (
+        baseurl == '' or bool(re.fullmatch(r'/[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*', baseurl))
+    ),
+    'Expected baseurl to be empty or a path starting with / without a trailing slash',
+)
 check(config.get('future') is True, 'Expected future: true')
 check(not config.get('plugins'), 'Unexpected custom plugins')
 for key, pair in translations.items():

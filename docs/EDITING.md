@@ -57,7 +57,7 @@ Templates use two Liquid statements:
 
 The first prints a value. The second inserts another file. The homepage includes one file per section. The shared layouts insert navigation and footer automatically.
 
-Keep `relative_url` on asset and page paths so the site works under `/portfolio/`.
+Keep `relative_url` on asset and page paths so the site works under `/ns-portfolio/`.
 
 ## Language content
 

@@ -45,7 +45,7 @@ Le liquid reste dans le hero. Le fond affiche des reflets de soleil sous l’eau
 
 J’ai téléversé les sources dans mon dépôt et suivi la publication dans Actions. Après un problème d’affichage, j’ai fait corriger `_config.yml` : le dépôt s’appelle `ns-portfolio`, donc `baseurl` doit être `/ns-portfolio`. Les chemins générés utilisent le filtre `relative_url`. J’ai ensuite confirmé que le site était accessible. Une publication réussie relevée dans Actions a duré **49 secondes**.
 
-J’ai ajouté une fiche consacrée à mon TP de découverte du Web, avec les sources de sa démonstration. Cette nouvelle version doit encore être envoyée sur GitHub puis contrôlée sur le site public.
+J’ai ajouté une fiche consacrée à mon TP de découverte du Web, avec les sources de sa démonstration. La fiche et la démonstration sont publiées. Le 15 octobre 2026, j’ai fait contrôler l’affichage des deux cartes, le compteur 02, le tableau des compétences et les interactions de la démonstration.
 
 <span id="preuves" class="legacy-anchor" aria-hidden="true"></span>
 <h2 id="evidence" data-proof-heading>Productions et preuves</h2>
@@ -95,7 +95,7 @@ The liquid sculpture remains in the hero. Subtle ocean-light reflections stay be
 
 I uploaded the source and followed publication in Actions. Broken styling was traced to `baseurl: /portfolio`, although the actual repository is named `ns-portfolio`. I had the configuration corrected to `/ns-portfolio` and confirmed that the website was accessible. A successful publication recorded in Actions took **49 seconds**.
 
-The new web exercise is now documented with its demonstration source. This update still needs to be uploaded to GitHub and checked on the public website.
+The web exercise and its demonstration source are published. On 15 October 2026, I had both project cards, the count of 02, the competency matrix and the demo interactions checked on the public website.
 
 <h2 id="evidence-en" data-proof-heading>Outputs and evidence</h2>
 

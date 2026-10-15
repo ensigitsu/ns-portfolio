@@ -34,8 +34,8 @@ For automatic rebuilding while editing, use the Jekyll development server instea
 bundle exec jekyll serve
 ```
 
-Open `http://127.0.0.1:4000/portfolio/` while that command runs. This uses HTTP and the original source modules.
+Open `http://127.0.0.1:4000/ns-portfolio/` while that command runs. This uses HTTP and the original source modules.
 
 ## Publish to GitHub
 
-Create a repository named `portfolio`, upload only the contents of the source `portfolio` folder at repository root, then set Pages to `main` and `/ (root)`. Keep the compiled local preview outside that repository. Detailed steps are in DEPLOYMENT.md.
+Use the existing `ensigitsu/ns-portfolio` repository, upload only the contents of the source `portfolio` folder at repository root, then set Pages to `main` and `/ (root)`. Keep the compiled local preview outside that repository. Detailed steps are in DEPLOYMENT.md.

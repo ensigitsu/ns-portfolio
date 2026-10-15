@@ -150,11 +150,11 @@ competency:
   fr: Compétence officielle
   en: Official competency
 matrix_note:
-  fr: ↗ Association documentée · ◇ Preuve de publication à compléter · — Non associée
-  en: ↗ Documented association · ◇ Publication evidence pending · — Not associated
+  fr: ↗ Association documentée · ◇ Preuves à compléter · — Non associée
+  en: ↗ Documented association · ◇ Evidence pending · — Not associated
 matrix_pending:
-  fr: Publication à vérifier
-  en: Publication pending
+  fr: Preuves à compléter
+  en: Evidence pending
 matrix_link:
   fr: Lire les preuves
   en: Read the evidence
@@ -230,8 +230,8 @@ tools:
   fr: Outils & technologies
   en: Tools & technologies
 evidence_pending:
-  fr: Développement local terminé · Publication et preuves publiques à compléter
-  en: Local development complete · Deployment and public evidence pending
+  fr: Preuves et vérifications à compléter
+  en: Evidence and verification pending
 french_evidence:
   fr: Cette réalisation est documentée en français pour l’épreuve E5.
   en: This project is documented in French for the E5 examination.
