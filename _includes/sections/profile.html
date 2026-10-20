@@ -1,8 +1,14 @@
-<section class="section profile-section shell" id="profile" aria-labelledby="profile-title">
+<section
+  class="section profile-section shell"
+  id="profile"
+  aria-labelledby="profile-title"
+>
   {% include legacy-anchor.html section="profile" %}
   <div class="section-heading reveal">
     <p class="eyebrow">{% include translation.html key="profile_kicker" %}</p>
-    <h2 id="profile-title">{% include translation.html key="profile_title" %}</h2>
+    <h2 id="profile-title">
+      {% include translation.html key="profile_title" %}
+    </h2>
   </div>
   <div class="profile-body reveal">
     <p class="lead">{% include translation.html key="profile_text" %}</p>
@@ -11,22 +17,17 @@
     <p>{% include translation.html key="profile_skills_text" %}</p>
     <div class="profile-facts">
       <div>
-        <span class="small-label">{% include translation.html key="current" %}</span
+        <span class="small-label"
+          >{% include translation.html key="current" %}</span
         ><strong>{% include translation.html key="year" %}</strong
         ><span>{% include translation.html key="specialty" %}</span>
       </div>
       <div>
-        <span class="small-label">{% include translation.html key="direction" %}</span
+        <span class="small-label"
+          >{% include translation.html key="direction" %}</span
         ><strong>{% include translation.html key="architect" %}</strong
         ><span>Cloud Architect / Security Architect</span>
       </div>
     </div>
-    {% if site.avatar.enabled %}
-      <div
-        id="avatar-mount"
-        data-model="{{ site.avatar.model | relative_url }}"
-        aria-hidden="true"
-      ></div>
-    {% endif %}
   </div>
 </section>

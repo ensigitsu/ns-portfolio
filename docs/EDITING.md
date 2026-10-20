@@ -67,7 +67,9 @@ Project evidence for E5 may remain in French. The initial project includes separ
 
 ## Dependencies and source comments
 
-Owned HTML, CSS, JavaScript, shaders and configuration files contain no source comments. GLSL `#include`, CSS colours such as `#050914`, URL fragments and Markdown headings are functional syntax and remain intact. Third-party source and licence notices remain unchanged in `assets/vendor` and `assets/fonts`.
+Application code uses HTML, CSS and JavaScript without explanatory source comments. The hero illustration and background reflections are animated in CSS; `assets/js/liquid-scene.js` adds the hero pointer tilt. Markdown headings, CSS colours and URL fragments are functional syntax. The font licence remains in `assets/fonts/OFL.txt`.
+
+Jekyll uses Markdown, YAML and Liquid for project content and page generation. These files remain necessary for the workshop. There are no Python, Ruby or GLSL source files, custom shaders or WebGL dependencies in the repository.
 
 ## GitHub profile field
 

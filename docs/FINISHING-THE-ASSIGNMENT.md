@@ -2,22 +2,23 @@
 
 Les informations personnelles et les trois captures demandées ont été reçues. Le rapport Lighthouse réel affiche 100/100 en accessibilité. Les dates et les conditions de travail sont intégrées.
 
-## 1. Publier la mise à jour personnalisée
+## 1. Publier la mise à jour du site
 
-1. Téléchargez mise-a-jour-personnalisee.zip, puis clic droit et Extraire tout.
+1. Téléchargez mise-a-jour-html-css-js.zip, puis clic droit et Extraire tout.
 2. Ouvrez a-envoyer.
 3. Dans https://github.com/ensigitsu/ns-portfolio, ouvrez Code, Add file, Upload files.
 4. Glissez le contenu de a-envoyer avec ses dossiers. Ne glissez pas le ZIP ni le dossier parent.
-5. Cette fois, _config.yml fait partie de la mise à jour : il configure Nathan et l’e-mail public fourni.
-6. Commit changes sur main, puis attendez la réussite de la dernière publication dans Actions.
+5. _config.yml configure le nom public Nathan S. et conserve le contact public.
+6. Supprimez les anciens fichiers indiqués dans A-SUPPRIMER.txt : un téléversement ne les efface pas automatiquement.
+7. Commit changes sur main, puis attendez la réussite de la dernière publication dans Actions.
 
-La liste exacte des fichiers à ajouter ou remplacer est dans le guide du petit ZIP. Aucun fichier existant n’est à supprimer.
+Les listes exactes des fichiers à remplacer, ajouter et supprimer sont dans le petit ZIP. Les fichiers absents de ces listes restent en place.
 
 ## 2. Contrôler le résultat final
 
 Ouvrez https://ensigitsu.github.io/ns-portfolio/ et actualisez la page.
 
-- Le site affiche Nathan et le contact public.
+- Le site affiche Nathan S. et le contact public.
 - Le profil indique la formation en alternance.
 - La séance portfolio est datée du 15 octobre et le TP Web du 12 octobre 2026.
 - Deux cartes, compteur 02, six compétences et bonnes associations.

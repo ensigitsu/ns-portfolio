@@ -306,13 +306,10 @@ button:focus-visible,
   margin-bottom: 36px;
 }
 .hero h1 {
-  font-size: clamp(88px, 10.5vw, 158px);
+  font-size: clamp(76px, 9vw, 140px);
   letter-spacing: -0.075em;
   line-height: 1.03;
-  max-width: 720px;
-}
-.hero-period {
-  color: #a7bfdb;
+  white-space: nowrap;
 }
 .hero-specialty {
   font-size: 24px;
@@ -1115,7 +1112,7 @@ button:focus-visible,
     --shell: 1380px;
   }
   .hero h1 {
-    font-size: 166px;
+    font-size: 140px;
   }
   .hero-intro {
     font-size: 15px;
@@ -1240,7 +1237,7 @@ button:focus-visible,
     margin-bottom: 25px;
   }
   .hero h1 {
-    font-size: clamp(76px, 13vw, 110px);
+    font-size: clamp(50px, 12vw, 96px);
   }
   .hero-specialty {
     font-size: 20px;
@@ -1259,7 +1256,13 @@ button:focus-visible,
     margin-top: 26px;
   }
   .hero-light {
-    background: linear-gradient(180deg, transparent 25%, #05091422 35%, #050914d9 62%, #050914 83%);
+    background: linear-gradient(
+      180deg,
+      transparent 25%,
+      #05091422 35%,
+      #050914d9 62%,
+      #050914 83%
+    );
   }
   .hero-bottom {
     bottom: 31px;
@@ -1443,7 +1446,7 @@ button:focus-visible,
     min-height: 920px;
   }
   .hero h1 {
-    font-size: 72px;
+    font-size: clamp(44px, 13vw, 50px);
   }
   .hero-copy {
     padding-top: 360px;
@@ -1599,28 +1602,29 @@ body {
   opacity: 0.65;
   contain: strict;
 }
-.ocean-backdrop canvas,
-.ocean-fallback {
+.ocean-reflections {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: -6%;
+  width: 112%;
+  max-width: none;
+  height: 112%;
   pointer-events: none;
-}
-.ocean-backdrop canvas {
-  opacity: 0;
-  transition: opacity 1.2s;
-}
-.ocean-fallback {
   object-fit: cover;
   opacity: 0.7;
-  transition: opacity 1.2s;
 }
-.ocean-backdrop.is-ready canvas {
-  opacity: 1;
+.js .ocean-reflections {
+  animation: ocean-drift 24s ease-in-out infinite;
 }
-.ocean-backdrop.is-ready .ocean-fallback {
-  opacity: 0;
+@keyframes ocean-drift {
+  0%,
+  100% {
+    transform: translate(-1%, 1%) scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(2%, -1%) scale(1.04) rotate(1deg);
+    opacity: 0.8;
+  }
 }
 .background-motion {
   position: fixed;
@@ -1657,31 +1661,41 @@ body {
   z-index: 0;
   overflow: hidden;
 }
-.scene-wrap canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-  opacity: 0;
-  transition: opacity 1.3s;
-}
-.scene-wrap.is-ready canvas {
-  opacity: 1;
-}
-.scene-fallback {
+.scene-art {
   position: absolute;
   width: min(76vw, 980px);
-  max-width: none;
   left: 40%;
   top: 49%;
-  transform: translateY(-50%) rotate(-22deg);
+  transform: translateY(-50%) perspective(900px) rotateX(var(--tilt-x, 0deg))
+    rotateY(var(--tilt-y, 0deg));
   opacity: 0.82;
-  transition: opacity 1s;
+  transition: transform 0.7s ease-out;
 }
-.scene-wrap.is-ready .scene-fallback {
-  opacity: 0;
+.scene-sculpture {
+  width: 100%;
+  transform: rotate(-22deg);
+}
+.js .scene-sculpture {
+  animation: sculpture-float 14s ease-in-out infinite;
+}
+@keyframes sculpture-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-22deg) scale(1);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-15deg) scale(1.02);
+  }
+}
+body[data-motion-paused='true'] .ocean-reflections,
+body[data-motion-paused='true'] .scene-sculpture,
+body[data-motion-hidden='true'] .ocean-reflections,
+body[data-motion-hidden='true'] .scene-sculpture,
+.hero[data-scene-visible='false'] .scene-sculpture {
+  animation-play-state: paused;
 }
 @media (max-width: 1100px) {
-  .scene-fallback {
+  .scene-art {
     left: 31%;
     width: 90vw;
   }
@@ -1691,11 +1705,11 @@ body {
     height: 620px;
     top: 0;
   }
-  .scene-fallback {
+  .scene-art {
     width: 640px;
     left: 50%;
     top: 290px;
-    transform: translate(-50%, -50%) rotate(-22deg);
+    transform: translate(-50%, -50%);
   }
 }
 @media print {

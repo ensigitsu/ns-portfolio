@@ -1,4 +1,4 @@
-title: Nathan
+title: Nathan S.
 description: Professional portfolio of Nathan, a BTS SIO systems and networks student.
 lang: fr
 url: https://ensigitsu.github.io
@@ -7,9 +7,6 @@ email: nathan-s.jet230@passinbox.com
 github_url: https://github.com/ensigitsu
 linkedin: https://www.linkedin.com/in/nathan-sas
 repository_url: https://github.com/ensigitsu/ns-portfolio
-avatar:
-  enabled: false
-  model: /assets/models/avatar.glb
 collections:
   projets:
     output: true
@@ -32,8 +29,6 @@ exclude:
   - LICENSE
   - CONTENT-LICENSE.md
   - THIRD-PARTY-NOTICES.md
-  - Gemfile
-  - Gemfile.lock
   - package.json
   - package-lock.json
   - node_modules

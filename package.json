@@ -1,10 +1,16 @@
 {
   "name": "nathan-portfolio",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
+    "check": "node scripts/validate.mjs",
     "preview:build": "node scripts/build-local-preview.mjs"
   },
   "devDependencies": {
-    "prettier": "3.9.10"
+    "parse5": "8.0.1",
+    "prettier": "3.9.10",
+    "yaml": "2.8.1"
   }
 }

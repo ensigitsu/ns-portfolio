@@ -4,11 +4,13 @@ export function initMotionControl() {
   const button = document.querySelector('[data-motion]');
   if (!button) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const active = new Set();
   let paused = false;
   document.body.dataset.motionPaused = 'false';
+  function visibility() {
+    document.body.dataset.motionHidden = String(document.hidden);
+  }
   function label() {
-    button.hidden = reduced.matches || active.size === 0;
+    button.hidden = reduced.matches;
     button.textContent = translate(paused ? 'motion_off' : 'motion_on');
     button.setAttribute('aria-pressed', String(paused));
   }
@@ -16,16 +18,14 @@ export function initMotionControl() {
     paused = !paused;
     document.body.dataset.motionPaused = String(paused);
     label();
-    document.dispatchEvent(new CustomEvent('portfolio:motion', { detail: { paused } }));
-  };
-  const onStatus = (event) => {
-    if (event.detail.available) active.add(event.detail.effect);
-    else active.delete(event.detail.effect);
-    label();
+    document.dispatchEvent(
+      new CustomEvent('portfolio:motion', { detail: { paused } }),
+    );
   };
   button.addEventListener('click', onPause);
-  document.addEventListener('portfolio:effect-status', onStatus);
   document.addEventListener('portfolio:language', label);
   reduced.addEventListener('change', label);
+  document.addEventListener('visibilitychange', visibility);
+  visibility();
   label();
 }

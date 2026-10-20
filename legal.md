@@ -27,13 +27,13 @@ La démonstration du TP Web propose un champ de prénom. Ce texte est utilisé u
 
 La langue choisie peut être mémorisée sur cet appareil dans `localStorage`, sous la clé `nathan-language`. Cette préférence n’est pas envoyée à un service de traduction et peut être supprimée en effaçant les données du site. Le site reste utilisable si ce stockage est bloqué.
 
-Les polices, scripts, images et shaders de l’interface sont servis depuis le même site. L’hébergeur peut traiter les données techniques des requêtes, notamment l’adresse IP, selon [sa politique de confidentialité](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). Les liens externes sont visités seulement à la demande de l’utilisateur. L’ajout futur d’un avatar doit garder ses fichiers et textures locaux pour préserver ce comportement.
+Les polices, scripts et images de l’interface sont servis depuis le même site. L’hébergeur peut traiter les données techniques des requêtes, notamment l’adresse IP, selon [sa politique de confidentialité](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). Les liens externes sont visités seulement à la demande de l’utilisateur.
 
 ## Propriété intellectuelle
 
 Le code original et l’adaptation du modèle sont sous licence **MIT**. Le modèle de classe provient d’[AbidHamza/modele-portfolio-bts-sio](https://github.com/AbidHamza/modele-portfolio-bts-sio) ; sa notice est conservée dans `LICENSE`.
 
-Les textes et illustrations originaux sont proposés sous licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.fr), sous réserve des droits des tiers. Une capture ne peut être diffusée que si ses droits et sa confidentialité le permettent. Three.js est sous licence MIT ; Manrope est sous licence SIL Open Font License. Les notices complètes figurent dans `THIRD-PARTY-NOTICES.md` et `assets`.
+Les textes et illustrations originaux sont proposés sous licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.fr), sous réserve des droits des tiers. Une capture ne peut être diffusée que si ses droits et sa confidentialité le permettent. Manrope est sous licence SIL Open Font License. Les notices complètes figurent dans `THIRD-PARTY-NOTICES.md` et `assets`.
 
 ## Publication des réalisations
 
@@ -63,13 +63,13 @@ The web exercise includes a first-name field. Its value is used only in the brow
 
 A language preference may be saved on this device in `localStorage`, under `nathan-language`. It is not sent to a translation service and can be removed by clearing this site’s data. The site remains usable if storage is blocked.
 
-Interface fonts, scripts, images and shaders are hosted with the site. The hosting provider may process request information, including IP addresses, according to [its privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). External links are visited only when selected. Any future avatar must keep its textures and files local to preserve this behaviour.
+Interface fonts, scripts and images are hosted with the site. The hosting provider may process request information, including IP addresses, according to [its privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). External links are visited only when selected.
 
 ## Copyright and licences
 
 Original code and the template adaptation are licensed under **MIT**. The class template is from [AbidHamza/modele-portfolio-bts-sio](https://github.com/AbidHamza/modele-portfolio-bts-sio); its notice is preserved in `LICENSE`.
 
-Original text and illustrations are offered under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), subject to third-party rights. Screenshots may only be published with appropriate rights and confidentiality safeguards. Three.js is MIT licensed; Manrope uses the SIL Open Font License. Full notices are in `THIRD-PARTY-NOTICES.md` and `assets`.
+Original text and illustrations are offered under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), subject to third-party rights. Screenshots may only be published with appropriate rights and confidentiality safeguards. Manrope uses the SIL Open Font License. Full notices are in `THIRD-PARTY-NOTICES.md` and `assets`.
 
 ## Publication of project evidence
 

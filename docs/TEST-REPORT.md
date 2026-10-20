@@ -1,61 +1,49 @@
-# Verification report - 15 October 2026
+# Verification report — 19 October 2026
 
-This personalised export starts from repository commit 4944660603c0d4052c53eb590f9f347f34286d6b, downloaded from the current public repository. It matched the previously supplied maintenance source. The assistant has not committed or deployed the personal changes.
+The update starts from public repository commit 492215ed27c8e0c39b8625e8174c849472c2cb8c. It is a local source patch for the student's manual upload; it has not been deployed to GitHub.
 
-## Student information and evidence
+## Implementation
 
-The student supplied the public name Nathan, the public contact, work-study status, the 15 October portfolio date and the 12 October Web TP date. Working conditions are a Windows 11 laptop, Edge and Visual Studio Code, alone, in class and at home.
+- Public display name: Nathan S.
+- Hero: existing vector illustration animated in CSS, with pointer tilt in JavaScript confined to the hero.
+- Background: local reflection image animated in CSS with light blur.
+- Shared pause control, reduced-motion support, hidden-tab pause and offscreen hero pause.
+- Python validator replaced with scripts/validate.mjs.
+- Ruby dependency files, GLSL shaders, Three.js, loaders and unused avatar code removed.
+- Jekyll collection, configuration, translations, project content, evidence and licences retained.
 
-The student declared responsibility for the mockup, ideas, content and presentation. The documentation identifies assisted technical implementation and review.
+The application source languages are HTML, CSS and JavaScript. Markdown project content, YAML configuration, JSON and binary/vector assets remain. The inventory checks the actual source files; no .gitattributes rule hides languages. GitHub calculates its own language statistics after the files are uploaded and obsolete files are deleted.
 
-Three original attachments were inspected. The Lighthouse image shows Accessibility 100/100 for the homepage. Two phone images show the project cards, with count 02 in the Web card capture. The portfolio phone capture is used in the separate teacher PDF.
-
-## Public browser checks
-
-- Two projects, count 02, six competency rows and the expected c3/c6 associations.
-- French/English switching.
-- Named demo greeting, fifth-click message and reset.
-- Public W3C Nu result: no errors or warnings.
-- Actions run 38771346787: Success, total duration 49s.
-- A later successful run took 42s; Q2 retains the student's observed 49-second run.
-- Public commit history and About website link.
-- Actual screenshots of the homepage, matrix, legal page, Actions and commits.
-
-These captures concern the public version before the personal update. They may show the earlier display initial, pending labels or incomplete contact. They were not retouched. The matrix is retained as part of a full-page original; the PDF frames the table region.
-
-The cloud browser's WebGL limitation does not establish performance on the student's GPU. Phone screenshots establish the visible cards, not every touch interaction.
-
-## Source and local-preview checks
+## Local verification
 
 | Check | Result |
 | --- | --- |
-| Jekyll 3.10.0 | Safe mode and strict front matter build passed |
-| Metadata | Two projects, actual dates, five sections and six official codes |
-| Translations | 85 FR/EN pairs; generated JSON matches YAML |
-| Public identity | Nathan and the supplied public email; full civil name absent from public source |
-| Generated pages | Two cards, count 02, correct matrix associations and proof anchors |
-| Resources | Evidence images, local links and generated resources resolve under /ns-portfolio |
-| Demo regression | jsdom greeting, empty name, fifth and later clicks, reset, safe text and cancelled navigation passed |
-| Local preview | Five portfolio pages, actual classic bundle, language, menu, evidence anchors, copy deterrence and local links passed |
-| HTML, CSS and SVG | Local Nu validator checked 30 build/preview files with zero errors |
-| Third-party source | Libraries and licence notices preserved |
-| Packaging | ZIP CRC, complete source coverage and patch application verified; extracted complete source rebuilt and validated |
-| Teacher PDF | Q1-Q7, personal E5 account, real images and clickable links; rendered and visually inspected |
+| Jekyll 3.10 | Safe build with strict front matter passed without Gemfile or Gemfile.lock |
+| JavaScript validator | Two projects, six official competency codes, 85 FR/EN translations, local resources and anchors passed |
+| Validator failure cases | Unknown competency, missing image and malformed front matter rejected |
+| Project generation | Two cards, count 02, six rows, portfolio c3/c6 and Web exercise c6 |
+| Web demonstration | Empty/named greeting, fifth-click threshold, later clicks, reset, safe text and cancelled form navigation passed |
+| Bundled application | Five portfolio pages loaded through local file URLs with no network requests or canvas calls in jsdom |
+| Interaction | Pause/resume, pointer boundaries, touch handling, reduced-motion changes, hidden-tab state and offscreen state passed in jsdom |
+| Interface | FR/EN, evidence anchors, menu state/focus, content deterrence and editable fields passed in jsdom |
+| Syntax | CSS parser and Nu validation of 30 generated HTML/CSS/SVG files passed with zero errors |
+| Source cleanup | No Python, Ruby, GLSL source files or explanatory source comments remain; font and project licence notices retained |
 
-The quality scores belong to the observed public version. The local tests do not claim a new Lighthouse score for the unuploaded personalised files.
+The tests use a simulated DOM. They do not measure browser frame rates or establish a new Lighthouse score. A local rendered browser preview was unavailable in this environment. The responsive CSS and motion preferences were checked in source and functional tests; the published site still needs a visual check in Edge and on a phone.
 
-## Final publication check
+## Existing evidence
 
-Upload the personalised patch, wait for Actions, open the website and check the name, email, dates, images, demo, language and matrix. Repeat quality checks after modifications. No future TP, employer or school name was invented.
-
-The full civil name appears only in the separate teacher PDF, outside the public archive. See FINISHING-THE-ASSIGNMENT.md for the exact upload and submission steps.
+Screenshots dated 15 October, the observed 49-second publication, W3C validation and the supplied Lighthouse Accessibility score of 100/100 remain historical evidence of that version. They were not retouched and do not establish scores for this update. The complete civil name remains outside the public source.
 
 ## Reproduce
 
+With Jekyll 3.10 and its GFM parser installed, and Node 20 or newer:
+
 ```sh
-bundle install
-bundle exec jekyll build --safe --strict_front_matter
-python3 scripts/validate.py --site _site
+jekyll build --safe --strict_front_matter
+npm install
+npm run check -- --site _site
+npm run preview:build
 ```
 
-The validator needs PyYAML. The optional local preview also needs Node and Prettier to rebuild; viewing the delivered snapshot and GitHub Pages publication do not.
+Apply every replacement and deletion listed in the patch before checking the published version. Wait for Pages to finish, then verify the name, effects, pause control, language switch, project pages, matrix and demo. Repeat W3C and Lighthouse checks after publication.

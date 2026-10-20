@@ -2,23 +2,22 @@
   {% include legacy-anchor.html section="home" %}
 
   <div class="scene-wrap" aria-hidden="true">
-    <img
-      class="scene-fallback"
-      src="{{ '/assets/images/liquid-fallback.svg' | relative_url }}"
-      alt=""
-      width="1000"
-      height="1000"
-
-    ><canvas
-      id="liquid-canvas"
-      data-vertex="{{ '/assets/shaders/liquid.vert.glsl' | relative_url }}"
-      data-fragment="{{ '/assets/shaders/liquid.frag.glsl' | relative_url }}"
-    ></canvas>
+    <div class="scene-art">
+      <img
+        class="scene-sculpture"
+        src="{{ '/assets/images/liquid-fallback.svg' | relative_url }}"
+        alt=""
+        width="1000"
+        height="1000"
+      />
+    </div>
   </div>
   <div class="hero-light" aria-hidden="true"></div>
   <div class="hero-copy shell">
-    <p class="eyebrow hero-eyebrow">{% include translation.html key="hero_kicker" %}</p>
-    <h1 id="hero-title">{{ site.title | escape }}<span class="hero-period">.</span></h1>
+    <p class="eyebrow hero-eyebrow">
+      {% include translation.html key="hero_kicker" %}
+    </p>
+    <h1 id="hero-title">{{ site.title | escape }}</h1>
     <p class="hero-specialty">BTS SIO <span>·</span> SISR</p>
     <p class="hero-domains">{% include translation.html key="hero_line" %}</p>
     <p class="hero-intro">{% include translation.html key="hero_intro" %}</p>
@@ -29,7 +28,8 @@
   </div>
   <div class="hero-bottom shell">
     <a class="scroll-cue" href="#profile"
-      ><span aria-hidden="true">↓</span>{% include translation.html key="scroll" -%}
+      ><span aria-hidden="true">↓</span>{% include translation.html key="scroll"
+      -%}
     </a>
   </div>
 </section>

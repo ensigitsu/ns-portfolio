@@ -31,8 +31,9 @@ Older class files with `cadre`, `resume` and `competences` are accepted. The col
 ## Local validation
 
 ```sh
-bundle exec jekyll build --strict_front_matter
-python3 scripts/validate.py --site _site
+jekyll build --safe --strict_front_matter
+npm install
+npm run check -- --site _site
 ```
 
-The Python check requires PyYAML: `python3 -m pip install PyYAML`. It checks metadata, codes, links and resources; it does not replace browser testing, W3C or Lighthouse.
+The JavaScript checker uses the development dependencies in package.json. It checks metadata, codes, links and resources; it does not replace browser testing, W3C or Lighthouse.

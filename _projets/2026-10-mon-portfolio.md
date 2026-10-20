@@ -7,7 +7,7 @@ context_fr: "Atelier de professionnalisation"
 summary: "A bilingual Jekyll portfolio published through GitHub Pages to document my BTS SIO systems and networks work."
 summary_fr: "Un portfolio Jekyll bilingue publié sur GitHub Pages pour documenter mes réalisations en BTS SIO SISR."
 competencies: [c3, c6]
-technologies: [Jekyll, Markdown, Three.js, WebGL, GitHub Pages]
+technologies: [HTML, CSS, JavaScript, Jekyll, GitHub Pages]
 category: academic
 cover: /assets/images/portfolio-cover.svg
 cover_alt: "Illustration of Nathan’s portfolio and the Jekyll publishing chain"
@@ -35,7 +35,7 @@ La première mise en ligne avait été confirmée le 14 octobre. La date de cett
 - PC portable sous Windows 11, Microsoft Edge et Visual Studio Code.
 - Compte GitHub et dépôt public `ensigitsu/ns-portfolio`, branche `main`, dossier racine.
 - Modèle Jekyll du professeur : `AbidHamza/modele-portfolio-bts-sio`.
-- HTML, CSS, JavaScript, Markdown et YAML ; Three.js et WebGL pour les effets.
+- HTML, CSS et JavaScript pour le site ; Markdown et YAML pour les fiches Jekyll.
 - Préparation et relecture du code avec une assistance IA. J’ai défini les choix de présentation et de contenu ; je dois comprendre les fichiers livrés et pouvoir les expliquer.
 
 ## Description de l’activité
@@ -45,6 +45,8 @@ J’ai choisi le contenu, la présentation et les évolutions visuelles de mon p
 J’ai téléversé les fichiers et les dossiers dans GitHub, suivi la publication dans Actions et vérifié le site public. Une publication réussie a duré **49 secondes**. J’ai ajouté la fiche de mon TP Web et sa démonstration : le site contient maintenant **deux projets**.
 
 Le problème d’affichage provenait du chemin `/portfolio/`, alors que le dépôt se nomme `ns-portfolio`. J’ai fait corriger `baseurl` en `/ns-portfolio`, puis vérifié le chargement des styles et des ressources. Le liquid reste dans le hero et les reflets animés restent en arrière-plan.
+
+Le 19 octobre, les effets ont été remplacés par une illustration animée en CSS et une légère interaction JavaScript. Le site ne contient plus de sources Python, Ruby ou GLSL. Les fiches Markdown et la génération Jekyll sont conservées.
 
 Le 15 octobre, j’ai fourni mes conditions réelles de travail, mon contact public et mes captures sur téléphone. Mon rapport Lighthouse affiche **100/100 en accessibilité**. Le contrôle public W3C du même jour ne signale **aucune erreur ni avertissement**.
 
@@ -76,7 +78,7 @@ Ces résultats concernent la version publique testée le 15 octobre. Ils ne gara
 
 ![Mentions légales de la version publique contrôlée le 15 octobre 2026]({{ '/assets/evidence/2026-10/legal.jpg' | relative_url }})
 
-Les captures sont des preuves de la version vérifiée, prises avant l’actualisation du prénom public et du contact. Elles restent conservées sans retouche. Le nom d’affichage actuel est Nathan.
+Les captures sont des preuves de la version vérifiée, prises avant l’actualisation du prénom public et du contact. Elles restent conservées sans retouche. Le nom d’affichage actuel est Nathan S.
 
 ### Compétences associées
 
@@ -111,6 +113,8 @@ The first publication was confirmed on 14 October. This entry records the 15 Oct
 ## Activity description
 
 I chose the portfolio content and presentation, uploaded the source folders and followed publication in Actions. The shared project files generate the cards, count and competency matrix. Both projects are published.
+
+On 19 October, the visual effects were replaced with a CSS-animated illustration and a small JavaScript interaction. Python, Ruby and GLSL source files were removed; Markdown project entries and Jekyll generation were retained.
 
 A successful publication lasted **49 seconds**. Broken styling was traced to `/portfolio/` paths, although the repository is named `ns-portfolio`. The configuration was corrected to `baseurl: /ns-portfolio`.
 

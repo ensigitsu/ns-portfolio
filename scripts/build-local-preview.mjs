@@ -29,7 +29,6 @@ const prettier = await import(process.env.PREVIEW_FORMATTER_URL || 'prettier');
 const modules = new Map();
 
 function resolveModule(reference, origin) {
-  if (reference === 'three') return 'assets/vendor/three.module.js';
   if (!reference.startsWith('.'))
     throw new Error(`Unsupported module: ${reference}`);
   return path.posix.normalize(
@@ -148,7 +147,7 @@ await bundleModule('assets/js/main.js');
 const payload = {};
 for (const filename of await files(site)) {
   const relative = path.relative(site, filename).split(path.sep).join('/');
-  if (relative === 'assets/i18n.json' || relative.endsWith('.glsl')) {
+  if (relative === 'assets/i18n.json') {
     payload[relative] = await fs.readFile(filename, 'utf8');
     continue;
   }
@@ -212,16 +211,12 @@ for (const filename of (await files(site)).filter((file) =>
     .join('/');
   let html = await fs.readFile(filename, 'utf8');
   html = html.replace(
-    /<script\b[^>]*type="importmap"[^>]*>[\s\S]*?<\/script>/g,
-    '',
-  );
-  html = html.replace(
     /<script\b[^>]*type="module"[^>]*>[\s\S]*?<\/script>/g,
     `<script src="${script}" defer></script>`,
   );
   html = html.replace(/<link\b[^>]*rel="preload"[^>]*>/g, '');
   html = html.replace(
-    /\b(href|src|data-vertex|data-fragment)="([^"]*)"/g,
+    /\b(href|src)="([^"]*)"/g,
     (original, attribute, value) => {
       if (value !== baseurl && !value.startsWith(baseurl + '/'))
         return original;

@@ -38,7 +38,9 @@ function applyLanguage(next, persist = false) {
     .querySelector('meta[name="description"]')
     ?.setAttribute(
       'content',
-      document.body.dataset[language === 'fr' ? 'descriptionFr' : 'descriptionEn'] || '',
+      document.body.dataset[
+        language === 'fr' ? 'descriptionFr' : 'descriptionEn'
+      ] || '',
     );
   document.querySelectorAll('[data-lang]').forEach((el) => {
     el.hidden = el.dataset.lang !== language;
@@ -50,18 +52,23 @@ function applyLanguage(next, persist = false) {
         : `evidence-${el.closest('[data-lang]')?.dataset.lang}`;
   });
   if (['#evidence', '#preuves'].includes(location.hash))
-    requestAnimationFrame(() => document.getElementById('evidence')?.scrollIntoView());
+    requestAnimationFrame(() =>
+      document.getElementById('evidence')?.scrollIntoView(),
+    );
   document.querySelectorAll('[data-language]').forEach((el) => {
     el.setAttribute('aria-pressed', String(el.dataset.language === language));
   });
-  const title = document.body.dataset[language === 'fr' ? 'titleFr' : 'titleEn'];
-  document.title = `${title || 'Nathan'} — BTS SIO SISR`;
+  const title =
+    document.body.dataset[language === 'fr' ? 'titleFr' : 'titleEn'];
+  document.title = `${title || 'Nathan S.'} — BTS SIO SISR`;
   if (persist) {
     try {
       localStorage.setItem('nathan-language', language);
     } catch {}
   }
-  document.dispatchEvent(new CustomEvent('portfolio:language', { detail: { language } }));
+  document.dispatchEvent(
+    new CustomEvent('portfolio:language', { detail: { language } }),
+  );
 }
 export async function initI18n() {
   const group = document.querySelector('.language-switch');

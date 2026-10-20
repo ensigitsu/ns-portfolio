@@ -28,7 +28,7 @@ J’ai travaillé seul, en classe et à domicile, sur un PC portable sous Window
 
 J’ai choisi les idées, le contenu et la présentation. L’adaptation et la relecture technique des sources ont été préparées avec une assistance IA dans ChatGPT Work. Je dois comprendre les corrections et pouvoir expliquer les fichiers.
 
-Le site utilise HTML, CSS, JavaScript, Markdown, YAML et des shaders pour les effets. GitHub Pages publie la branche main, dossier racine, avec baseurl /ns-portfolio. La langue peut être mémorisée localement ; le formulaire de démonstration traite le prénom seulement dans le navigateur. Les licences et notices sont conservées.
+Le site utilise HTML, CSS et JavaScript. Les fiches sont en Markdown et la configuration Jekyll en YAML. Les effets sont animés en CSS, avec une légère interaction JavaScript dans le hero. GitHub Pages publie la branche main, dossier racine, avec baseurl /ns-portfolio. La langue peut être mémorisée localement ; le formulaire de démonstration traite le prénom seulement dans le navigateur. Les licences et notices sont conservées.
 
 ## Description de l’activité
 

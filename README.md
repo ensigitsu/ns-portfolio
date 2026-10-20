@@ -1,68 +1,56 @@
-# Nathan - BTS SIO SISR portfolio
+# Nathan S. — BTS SIO SISR portfolio
 
-A bilingual Jekyll portfolio for a first-year systems and networks student on a work-study programme. It preserves the liquid hero, subtle ocean reflections, project cards and the six official competency labels.
+Bilingual portfolio published at https://ensigitsu.github.io/ns-portfolio/.
 
-## Current configuration
+The application uses HTML, CSS and JavaScript. Images, fonts, Markdown project entries and Jekyll configuration are kept alongside the application. GitHub Pages generates the published pages from these sources.
 
-- Public display name: Nathan.
-- Public contact: nathan-s.jet230@passinbox.com.
-- Repository: https://github.com/ensigitsu/ns-portfolio.
-- Website: https://ensigitsu.github.io/ns-portfolio/.
-- Portfolio workshop: 15 October 2026.
-- Web exercise: 12 October 2026; documented on 15 October.
-- Equipment supplied by the student: Windows 11 laptop, Microsoft Edge and Visual Studio Code; work in class and at home.
+## Edit the site
 
-The complete civil name appears only in the separately delivered teacher PDF. That PDF is not part of the public source archive.
+| Content | File |
+| --- | --- |
+| Public name, contact and links | `_config.yml` |
+| French and English interface text | `_data/translations.yml` |
+| Homepage sections | `_includes/sections/` |
+| Project entries | `_projets/` |
+| Project layout | `_layouts/project.html` |
+| Styles | `assets/css/style.css` |
+| JavaScript entry point | `assets/js/main.js` |
 
-## Upload the personalised update
+Copy `_projets/_A-COPIER.md` to `YYYY-MM-subject.md`, complete its metadata and five sections, then add your evidence. Cards, the project count and the competency matrix update during the next build. See `docs/ADDING-PROJECTS.md`.
 
-Extract `mise-a-jour-personnalisee.zip`. Open `a-envoyer`, then use **Code → Add file → Upload files** at the repository root. Drag the contents, preserving folders, and commit to `main`. This update includes `_config.yml` with the public identity and contact supplied by the student.
+The public name is Nathan S. Only the supplied public contact belongs in `_config.yml`. Teacher PDFs and private backups must stay outside the repository.
 
-Wait for Actions, open the real website and check the new name, email, dates, project cards, count 02, evidence images and matrix. The assistant has prepared these files; it has not committed or deployed them.
+## Visual effects
 
-For a complete replacement, upload only the contents of this archive's `portfolio` folder. Keep the enclosing folder, ZIP, `OPEN-ME.html`, guides and `local-preview` off GitHub. Keep `baseurl: /ns-portfolio` for the current repository. A new repository named `portfolio` would require `/portfolio` instead.
+The hero uses a local vector illustration with CSS animation and a JavaScript pointer tilt confined to the hero. The background uses a lightly blurred reflection image animated in CSS. The pause button stops both effects. Reduced-motion preferences disable animation, and the hero pauses outside the viewport.
 
-## Open the extracted archive locally
+## GitHub Pages
 
-Extract everything and open `OPEN-ME.html` beside the `portfolio` folder. It opens a separately compiled local snapshot with working file navigation and scripts.
+Keep `baseurl: /ns-portfolio`. Publish from `main`, `/ (root)`, in **Settings → Pages**. Upload source files with their folders. Do not upload a ZIP, a compiled `_site`, `node_modules` or the optional local preview. Do not add `.nojekyll`.
 
-The HTML inside `portfolio` is Jekyll source. A direct double-click does not compile front matter or Liquid. Edit source files, publish through GitHub Pages, and rebuild the optional snapshot when needed. See `docs/LOCAL-PREVIEW.md`.
+This repository has no Gemfile, custom Ruby script, Python script, GLSL shader or WebGL library. GitHub provides the Jekyll build environment. Markdown, YAML and Liquid are still required by the class project structure. See `docs/DEPLOYMENT.md`.
 
-## Edit and add projects
+## Local checks
 
-- `_config.yml`: public identity and links.
-- `_data/translations.yml`: French and English interface text.
-- `_includes/sections/`: homepage sections.
-- `_projets/`: project Markdown.
-- `_layouts/project.html`: project page layout.
-- `assets/css/style.css`: styles.
-- `assets/evidence/2026-10/`: real evidence and provenance notes.
-
-Copy `_projets/_A-COPIER.md` to a new `YYYY-MM-subject.md` file. Fill the metadata and five academic sections, justify selected competency codes and attach authorised evidence. Cards, count and matrix columns update automatically. The copy template is excluded from publication. See `docs/ADDING-PROJECTS.md`.
-
-## Recorded evidence
-
-The supplied Lighthouse screenshot shows **100/100 for Accessibility** on 15 October 2026. The public W3C check on the same day reported **no errors or warnings**. A successful 49-second Actions run and the commit history were checked. The student supplied phone captures showing the project cards and count 02.
-
-The screenshots record the public version before the name, email and date update. They are retained without retouching. They do not establish how a later version performs. The source flags now reflect the attached evidence; check the personalised website after publishing.
-
-Q1-Q7 are in `docs/TP-CHECKLIST.md`. The public E5 account is in `docs/E5-REALISATION.md`; final upload steps are in `docs/FINISHING-THE-ASSIGNMENT.md`.
-
-## Build
+With Jekyll 3.10 and its GFM parser installed:
 
 ```sh
-bundle install
-bundle exec jekyll build --safe --strict_front_matter
-python3 -m pip install PyYAML
-python3 scripts/validate.py --site _site
+jekyll build --safe --strict_front_matter
 ```
 
-For development, run `bundle exec jekyll serve` and open `http://127.0.0.1:4000/ns-portfolio/`. GitHub Pages does not need Node. Node and Prettier are used only by the optional local-preview builder.
+With Node 20 or newer:
 
-The source archive excludes Git metadata, dependency installations, caches and `_site`. The compiled snapshot is separate and supplied for local double-click viewing.
+```sh
+npm install
+npm run check -- --site _site
+```
 
-## Effects and licences
+These Node dependencies are development tools; GitHub Pages does not need to install them. To serve the source locally, run `jekyll serve` and open http://127.0.0.1:4000/ns-portfolio/.
 
-The liquid sculpture stays inside the hero. Ocean reflections remain behind the content, with a light blur, a shared pause control, reduced-motion support and local static fallbacks. The optional avatar remains disabled; see `assets/models/README.md`.
+A direct double-click on source HTML does not run Jekyll. After a build, `npm run preview:build` creates an optional sibling `local-preview` folder for local opening. See `docs/LOCAL-PREVIEW.md`.
 
-The template comes from https://github.com/AbidHamza/modele-portfolio-bts-sio. Original code is MIT; original content is CC BY 4.0 subject to third-party rights. Third-party source and licence notices are preserved. UI copy deterrence and robot directives do not make a public repository confidential; see `docs/CONTENT-PROTECTION.md`.
+## Evidence and licences
+
+The two project entries describe the portfolio workshop on 15 October 2026 and the Web exercise completed on 12 October. Existing screenshots, the observed 49-second publication, the W3C result and the Lighthouse Accessibility score of 100/100 record the version checked on 15 October. They are historical evidence, not new scores for this update.
+
+The class template is https://github.com/AbidHamza/modele-portfolio-bts-sio. Original code uses MIT; original content uses CC BY 4.0 subject to third-party rights. Manrope's font licence is included. See `LICENSE`, `CONTENT-LICENSE.md` and `THIRD-PARTY-NOTICES.md`.
